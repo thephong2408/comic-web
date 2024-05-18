@@ -1,0 +1,15 @@
+// btn cuộn
+.btn-top {
+    display: none;
+}
+.visible {
+    position: fixed;
+    right: 2rem;
+    bottom: 50%;
+    background-color: rgba(210, 0, 233, 0.5);
+    padding: auto;
+    padding: 1rem;
+    font-size: 3rem;
+    color: var(--text-color-white);
+    z-index: 9999;
+}

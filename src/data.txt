@@ -1,0 +1,27 @@
+ [
+    {
+        id: 1,
+        name: 'tên truyện',
+        theloai: 'the loại',
+        tacgia: 'tac gia',
+        noidung: 'noi dung',
+        avt: '',
+        sochuong: [
+            { chap: 1, src: [{ prop1: 'value1' }, { prop2: 'value2' }] },
+            { chap: 2, src: [{ prop3: 'value3' }, { prop4: 'value4' }] },
+            { chap: 3, src: [{ prop5: 'value5' }, { prop6: 'value6' }] },
+            { chap: 4, src: [{ prop7: 'value7' }, { prop8: 'value8' }] },
+            { chap: 5, src: [{ prop9: 'value9' }, { prop10: 'value10' }] },
+            { chap: 6, src: [{ prop11: 'value11' }, { prop12: 'value12' }] },
+            { chap: 7, src: [{ prop13: 'value13' }, { prop14: 'value14' }] },
+            { chap: 8, src: [{ prop15: 'value15' }, { prop16: 'value16' }] },
+            { chap: 9, src: [{ prop17: 'value17' }, { prop18: 'value18' }] },
+            { chap: 10, src: [{ prop19: 'value19' }, { prop20: 'value20' }] },
+            { chap: 11, src: [{ prop21: 'value21' }, { prop22: 'value22' }] },
+            { chap: 12, src: [{ prop23: 'value23' }, { prop24: 'value24' }] },
+            { chap: 13, src: [{ prop25: 'value25' }, { prop26: 'value26' }] },
+            { chap: 14, src: [{ prop27: 'value27' }, { prop28: 'value28' }] },
+            { chap: 15, src: [{ prop29: 'value29' }, { prop30: 'value30' }] },
+        ],
+    },
+];

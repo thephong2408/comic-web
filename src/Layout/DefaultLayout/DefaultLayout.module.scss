@@ -1,0 +1,193 @@
+.wrapper {
+    background-color: #322c2c;
+}
+// css chứa
+.wrapper-container {
+    background-color: var(--background-color--white);
+    padding: 2rem;
+    margin-inline: 20rem;
+    font-size: var(--ms);
+
+    & nav {
+        display: flex;
+        align-items: center;
+        background-color: var(--background-color-nav);
+    }
+}
+// btn cuộn
+.btn-top {
+    display: none;
+}
+.visible {
+    position: fixed;
+    right: 2rem;
+    bottom: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: auto;
+    padding: 1rem;
+    font-size: 3rem;
+    color: var(--text-color-white);
+    z-index: 9999;
+}
+
+.nav_li {
+    width: 12rem;
+    padding: 1rem;
+    display: flex;
+    color: var(--text-color-dark);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+
+    border-right: solid 1px #ffeeee;
+
+    &:hover {
+        background-color: var(--background-color--white);
+        color: rgb(179, 0, 255);
+    }
+}
+.nav_li:hover {
+    background-color: var(--text-color-band-s);
+    color: blueviolet;
+}
+.onclick-btn {
+    background-color: var(--text-color-band-s);
+    color: var(--text-color-white);
+    width: 12rem;
+    padding: 1rem;
+    background-color: blueviolet;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-right: solid 1px #ffeeee;
+}
+// tippy-- amouse
+.category-li {
+    position: relative;
+}
+.div-category {
+    position: absolute;
+    top: 3.6rem;
+    z-index: 9000000000;
+    border: 1px solid #eaeaea;
+    width: 40rem;
+    right: 0;
+    flex-wrap: wrap;
+}
+
+.nav1 {
+    display: flex;
+    width: 40rem;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.nav1-li {
+    flex-wrap: wrap;
+}
+.div-history,
+.div-rank {
+    position: absolute;
+    top: 3.6rem;
+    z-index: 9000000000;
+    border: 1px solid #eaeaea;
+    width: 40rem;
+    left: 0;
+}
+
+.list {
+    font-size: var(--m);
+    padding: 1rem;
+    width: 13rem;
+    &:hover {
+        color: #f72307;
+        background-color: var(--background-color--white);
+    }
+}
+
+.home {
+    background-color: #19dd0e;
+    color: rgb(255, 166, 0);
+    font-size: var(--m);
+}
+.container {
+    padding: 2rem;
+    background-color: var(--background-color--white);
+    margin-inline: 20rem;
+    display: flex;
+    justify-content: space-between;
+}
+//Sidebar
+.sidebar {
+    width: 65%;
+}
+// content
+.content {
+    width: 35%;
+    margin-top: 5.4rem;
+}
+// phân trang
+
+//footer
+.footer {
+    width: 100%;
+    height: 15rem;
+    background-color: var(--background-color-footer);
+}
+
+// comment
+.comment {
+    padding: 3rem;
+}
+// tích hợp màn hình
+
+@media only screen and (max-width: 1400px) {
+    .content {
+        width: 100%;
+        margin-top: 5.4rem;
+    }
+    .sidebar {
+        width: 100%;
+    }
+    .wrapper-container {
+        margin-inline: 4rem;
+    }
+
+    .container {
+        flex-direction: column;
+        margin: 0;
+        margin-inline: 4rem;
+    }
+}
+@media only screen and (max-width: 1200px) {
+    .men {
+        display: none;
+    }
+}
+@media only screen and (max-width: 1000px) {
+    .girl,
+    .rank-li {
+        display: none;
+    }
+
+    .wrapper-container {
+        margin-inline: 2rem;
+    }
+    .container {
+        margin-inline: 2rem;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .search {
+        display: none;
+    }
+}
+@media only screen and (max-width: 700px) {
+    .nav {
+        display: none;
+    }
+}
+
+// tippy

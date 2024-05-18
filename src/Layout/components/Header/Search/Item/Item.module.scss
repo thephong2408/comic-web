@@ -1,0 +1,36 @@
+.wrapper {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    height: auto;
+}
+.avt {
+    margin-right: 2rem;
+    width: 4rem;
+    min-height: 4rem;
+}
+.name {
+    display: inline;
+}
+.name_1 {
+    display: flex;
+    color: var(--text-color-dark);
+    align-items: center;
+    overflow: hidden; /* Ẩn phần văn bản tràn */
+    text-overflow: ellipsis; /* Chuyển phần văn bản tràn thành dấu ba chấm */
+    width: 100%;
+    & h4 {
+        margin-right: 0.5rem;
+        margin-bottom: 1rem;
+    }
+    & .icon {
+        color: aqua;
+    }
+    & .no_icon {
+        display: none;
+    }
+}
+.chap {
+    color: #a29e9e;
+    font-size: var(--ms);
+}

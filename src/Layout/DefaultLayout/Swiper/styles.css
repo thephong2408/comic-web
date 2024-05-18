@@ -1,0 +1,94 @@
+h3 {
+    font-size: var(--xxl);
+    padding-block: 1.4rem;
+    color: #007aff;
+}
+
+.swiper {
+    width: 100%;
+    height: 25rem;
+    background-color: var(--background-color--white);
+}
+.swiper-button-prev,
+.swiper-button-next {
+    color: rgb(125, 129, 129);
+    height: 5rem;
+    width: 5rem;
+}
+.swiper-button-next:hover {
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5); /* Màu đen trong suốt */
+}
+.swiper-button-prev:hover {
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5); /* Màu đen trong suốt */
+}
+.swiper-slide {
+    text-align: center;
+    background: var(--background-color--white);
+    min-width: 20rem;
+    max-width: 22rem;
+    height: 100%;
+    /* Center slide text vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.append-buttons {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.append-buttons button {
+    display: inline-block;
+    cursor: pointer;
+    border: 1px solid #007aff;
+    color: #007aff;
+    text-decoration: none;
+    padding: 4px 10px;
+    border-radius: 4px;
+    margin: 0 10px;
+    font-size: 13px;
+}
+.wrapper {
+    width: 100%;
+    height: 100%;
+}
+img {
+    position: relative;
+}
+.name {
+    width: 100%;
+    position: absolute;
+    height: 5rem;
+    bottom: 0rem;
+    background-color: rgba(0, 0, 0, 0.5); /* 50% độ trong suốt */
+    display: flex;
+    align-items: center; /* Thiết lập phần tử con dọc với nhau */
+
+    color: var(--text-color-white);
+    padding-left: 20px;
+}
+p {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+}
+.chap {
+    font-size: var(--mss);
+}
+.names {
+    font-size: var(--m);
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

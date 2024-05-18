@@ -1,0 +1,121 @@
+//gird
+.wrapper2 {
+    background-color: #322c2c;
+
+    height: 100vh;
+}
+.wrapper1 {
+    margin-inline: 20rem;
+    height: 100vh;
+    background-color: var(--background-color--white);
+    padding-inline: 2rem;
+    & .theloai {
+        color: aqua;
+        display: flex;
+        padding-left: 0.5rem;
+        & h3 {
+            margin-right: 1rem;
+        }
+    }
+}
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); // Thiết lập cột động
+    grid-gap: 1rem; // Khoảng cách giữa các phần tử
+    .wrapper {
+        padding: 10px;
+        height: auto;
+        .card {
+            min-width: 15rem;
+            max-width: 20rem;
+            height: auto;
+            .img {
+                position: relative;
+                height: 20rem;
+                .img1 {
+                    width: 100%;
+                    height: 100%;
+                }
+                .hits {
+                    position: absolute;
+                    width: 100%;
+                    bottom: 0;
+                    height: 2rem;
+                    padding-block: 5px;
+                    padding-left: 10px;
+                    padding-right: 10px;
+                    font-size: 1rem;
+                    background-color: var(--background-color-black);
+                    color: var(--text-color-white);
+                    display: flex;
+                    justify-content: space-between;
+                }
+            }
+            .information {
+                margin-top: 1rem;
+                .name {
+                    font-size: var(--m);
+                    display: -webkit-box;
+                    width: 100%;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                    -webkit-line-clamp: 2; /* Giới hạn số dòng hiển thị */
+                    max-height: 4em; /* Số dòng tối đa */
+                }
+                .information-nav {
+                    padding-block: 0.5rem;
+                    width: 100%;
+                    height: 100%;
+                    .information-ul {
+                        justify-content: space-between;
+                        display: flex;
+                        width: 100%;
+                        align-items: center;
+                        padding-block: 0.5rem;
+                        .chap {
+                            font-size: var(--m);
+                            color: #9b9797;
+                        }
+                        .time {
+                            font-size: var(--ms);
+                            color: #9b9797;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1400px) {
+    .gird {
+        grid-template-columns: auto auto auto auto auto auto;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .gird {
+        grid-template-columns: auto auto auto auto auto;
+    }
+}
+@media only screen and (max-width: 900px) {
+    .gird {
+        grid-template-columns: auto auto auto;
+    }
+}
+@media only screen and (max-width: 700px) {
+    .gird {
+        grid-template-columns: auto auto;
+    }
+}
+
+@media only screen and (max-width: 1400px) {
+    .wrapper1 {
+        margin-inline: 4rem;
+    }
+}
+@media only screen and (max-width: 1000px) {
+    .wrapper1 {
+        margin-inline: 2rem;
+    }
+}

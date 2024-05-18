@@ -1,0 +1,130 @@
+.wrapper {
+    font-size: var(--mss);
+    border: 1px solid #a49d9d;
+    padding: 1rem;
+    margin-bottom: 5rem;
+}
+.title {
+    font-weight: 200;
+    padding-block: 2rem;
+    color: rgb(59, 6, 218);
+
+    & span {
+        float: right;
+        font-size: var(--ms);
+        color: var(--text-color-dark);
+    }
+}
+.board {
+    display: flex;
+    max-height: 40rem;
+    overflow-y: auto;
+    padding-right: 0.5rem;
+    & .img {
+        width: 7rem;
+        height: 7rem;
+        object-fit: fill;
+        margin-right: 2rem;
+    }
+}
+.board-ul {
+    width: 100%;
+    font-size: var(--m);
+
+    padding: 1rem;
+    & li {
+        padding-block: 0.5rem;
+        margin-block: 1rem;
+        background-color: #f1e9e9;
+    }
+}
+.rank {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-inline: 1rem;
+    border-radius: 9999999px;
+    & .icon-rank {
+        font-size: 3rem;
+        text-shadow: 2px 2px 4px rgb(237, 104, 104);
+        color: #dc2626;
+        font-weight: 600;
+    }
+}
+.container {
+    height: 7rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    & .name {
+        color: var(--text-color-dark);
+        & a {
+            color: var(--text-color-dark);
+            font-size: var(--m);
+
+            width: 100%;
+            text-align: start;
+        }
+    }
+    span {
+        color: var(--text-color-band);
+    }
+    a {
+        color: var(--text-color-band-s);
+    }
+}
+.times {
+    float: right;
+    display: flex;
+    margin-right: 1.5rem;
+    align-items: center;
+    font-size: var(--ms);
+    & span {
+        margin-right: 0.5rem;
+        margin-top: 0.5rem;
+        font-size: var(--ms);
+    }
+}
+.p {
+    display: flow-root;
+    font-size: var(--ms);
+}
+@media only screen and (max-width: 1400px) {
+    .title {
+        font-weight: 600;
+        font-size: var(--l);
+
+        & span {
+            font-size: var(--n);
+        }
+    }
+    .name {
+        font-size: var(--n);
+    }
+    .chap {
+        font-size: var(--ns);
+    }
+    .icon-rank {
+        font-size: var(--l);
+    }
+    .p {
+        font-size: var(--ns);
+    }
+    .times {
+        font-size: var(--ns);
+    }
+    .rank {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-inline: 3rem;
+        border-radius: 9999999px;
+        & .icon-rank {
+            font-size: 8rem;
+            text-shadow: 2px 2px 4px rgb(237, 104, 104);
+            color: #dc2626;
+            font-weight: 600;
+        }
+    }
+}

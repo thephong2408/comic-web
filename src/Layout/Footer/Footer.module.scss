@@ -1,0 +1,32 @@
+.wrapper {
+    display: flex;
+    padding: 2rem;
+    width: 100%;
+    padding-left: 20rem;
+    padding-right: 20rem;
+    & nav {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        font-size: var(--m);
+        display: flex;
+        float: left;
+    }
+    & .name {
+        font-size: var(--l);
+    }
+}
+
+// tích hợp màn hình
+@media only screen and (max-width: 1400px) {
+    .wrapper {
+        padding-left: 4rem;
+        padding-right: 4rem;
+    }
+}
+@media only screen and (max-width: 1000px) {
+    .wrapper {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}

@@ -1,0 +1,151 @@
+// css chứa
+// btn cuộn
+.btn-top {
+    display: none;
+}
+.wrapper-container {
+    font-size: var(--ms);
+    width: 100%;
+}
+.visible {
+    position: fixed;
+    right: 2rem;
+    bottom: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: auto;
+    padding: 1rem;
+    font-size: 3rem;
+    color: var(--text-color-white);
+    z-index: 9999;
+}
+nav.navbar {
+    display: flex;
+    height: 4.5rem;
+    align-items: center;
+    background-color: rgb(106, 0, 255);
+    background: linear-gradient(180deg, #a742f5, #c5669e);
+    border: none;
+    .nav_li {
+        width: 12rem;
+        padding: 1rem;
+        height: 4.5rem;
+        font-weight: 600;
+        color: var(--text-color-dark);
+        border-right: solid 1px #ffffff;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        &:hover {
+            background: linear-gradient(360deg, #3d01f3, #079fe0);
+            color: #fffefe;
+        }
+    }
+    .home {
+        color: var(--color-iconhome);
+        font-size: var(--l);
+    }
+
+    .onclick-btn {
+        width: 12rem;
+        padding: 1rem;
+        height: 4.5rem;
+        font-weight: 600;
+        color: var(--text-color-dark);
+        border-right: solid 1px #ffffff;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background: linear-gradient(360deg, #3d01f3, #079fe0);
+        color: #ffffff;
+    }
+}
+// tippy-- amouse
+.category-li {
+    position: relative;
+}
+.div-category {
+    background: linear-gradient(-360deg, #3d01f3, #079fe0);
+    position: absolute;
+    top: 4.5rem;
+    z-index: 9000000000;
+
+    box-shadow: 1px 1px 13px 1px rgba(0, 0, 0, 0.2);
+    width: 40rem;
+    right: -0.1rem;
+    flex-wrap: wrap;
+    .nav1 {
+        display: flex;
+        color: #ffffff;
+        width: 40rem;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        .list {
+            font-size: var(--m);
+            padding: 1rem;
+            width: 13rem;
+            &:hover {
+                color: #f72307;
+                background-color: var(--hover-nav);
+            }
+        }
+    }
+}
+
+.nav1-li {
+    flex-wrap: wrap;
+}
+
+.container {
+    display: flex;
+    margin-inline: 20rem;
+}
+// phân trang
+
+//Warning- cảnh báo
+.warning {
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--background-color-warning);
+    background-color: var(--background-color-warning);
+    height: 3.5rem;
+    & span {
+        margin-left: 2rem;
+        color: var(--background-color-warning);
+    }
+    & button {
+        color: var(--text-color-white);
+        background-color: var(--background-color-warning);
+        font-size: var(--l);
+        height: 100%;
+        width: 5rem;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .men {
+        display: none;
+    }
+}
+@media only screen and (max-width: 1000px) {
+    .girl {
+        display: none;
+    }
+    .rank-li {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .search {
+        display: none;
+    }
+}
+@media only screen and (max-width: 700px) {
+    .nav {
+        display: none;
+    }
+}

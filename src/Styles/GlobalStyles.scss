@@ -1,0 +1,131 @@
+@import 'normalize.css';
+
+:root {
+    //color
+
+    --color-dark: #333;
+    --color-white: #fff;
+    --color-band: #989292;
+    --color-band-s: #c1bdbd;
+
+    //text
+    --text-color-dark: #333;
+    --text-color-white: #fff;
+    --text-color-band: #989292;
+    --text-color-band-s: #c1bdbd;
+    --text-color-band-ss: #eee5e5;
+    --text-color-rank: #000000;
+
+    //hover
+    --hover-nav: #ebe2e2;
+    --hover-pagination: #aaa2a2;
+
+    //Backgroud
+    --color-iconhome: rgb(255, 166, 0);
+    --background-color-home: #19dd0e;
+
+    --background-color--body: #f3eeee;
+    --background-color--white: #fff;
+    --background-color-black: #000000;
+    --background-color-warning: #fff;
+    --background-color-nav: #c2baba;
+
+    --background-color: #fff;
+    //Backgroud-defaultLayout
+    // nav
+    ////Background-Warning
+    --background-boder-color-warning: #e3260c;
+    ////Background-car
+    --background-color-card: rgba(0, 0, 0, 0.5);
+    // ///Background-rank
+    --background-color-rank: #e3ef06;
+    ////Background-footer
+    --background-color-footer: #d8cccc;
+
+    //font-size
+    --xxll: 4rem;
+    --xxxxl: 3rem;
+    --xxxl: 2.4rem;
+    --xxl: 2.2rem;
+    --xl: 2rem;
+    --l: 2.2rem;
+    --n: 2rem;
+    --ns: 1.8rem;
+    --m: 1.6rem;
+    --ms: 1.4rem;
+    --mss: 1.2rem;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+body {
+    overflow-y: overlay;
+
+    font-family: Helvetica, serif;
+}
+//scrollba css
+html ::-webkit-scrollbar {
+    border-radius: 0px;
+    width: 8px;
+}
+html *::-webkit-scrollbar {
+    border-radius: 0;
+    width: 8px;
+}
+html ::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgba(22, 24, 35, 0.06);
+}
+html *::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgba(22, 24, 35, 0.06);
+}
+html ::-webkit-scrollbar-track {
+    border-radius: 0px;
+    background-color: rgba(0, 0, 0, 0);
+}
+html *::-webkit-scrollbar-track {
+    border-radius: 0;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+button,
+input,
+[tabindex] {
+    outline: none;
+    border: none;
+    background-color: transparent;
+}
+button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+a[href] {
+    color: var(--text-color);
+    text-decoration: none;
+    cursor: pointer;
+}
+li {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+img {
+    width: 100%; /* Kích thước hình ảnh sẽ phù hợp với chiều rộng của div */
+    height: auto; /* Giữ tỷ lệ khung hình */
+    cursor: pointer;
+}
+a {
+    cursor: pointer;
+}
+i {
+    cursor: pointer;
+}

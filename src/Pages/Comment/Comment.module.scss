@@ -1,0 +1,150 @@
+.wrapper {
+    padding-bottom: 5rem;
+    justify-content: center;
+
+    height: auto;
+    display: flex;
+    background: linear-gradient(45deg, #a742f5, #42aaf5);
+
+    padding: 4rem;
+}
+.title {
+    font-size: var(--l);
+    margin-bottom: 10rem;
+    color: #fff;
+}
+
+.thongtin {
+    color: #fff;
+}
+//form
+/* Thiết lập font chữ cho form */
+
+//comment
+.input {
+    max-width: 40rem;
+    min-width: 40rem;
+    max-height: 10rem;
+    min-height: 10rem;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 4px;
+    margin-top: 1rem;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+.container-commnet {
+    margin-top: 5rem;
+    width: 100%;
+    max-height: 50rem;
+    overflow: scroll;
+    display: flex;
+    justify-content: space-between;
+    color: #000;
+
+    .comment-ul {
+        display: block;
+
+        & .comment-li {
+            width: 40rem;
+            position: relative;
+            display: flex;
+
+            padding-block: 2rem;
+            font-size: var(--m);
+            & .avt {
+                margin-right: 2rem;
+                position: absolute;
+                top: 2.5rem;
+                padding: 1rem;
+                font-size: var(--l);
+                border-radius: 99999px;
+                background-color: #84e852;
+                box-shadow: 1px 1px 13px 1px #bf0aec;
+            }
+            & .comment-comment {
+                flex: 1;
+                margin-left: 6rem;
+                padding: 1rem;
+                border-radius: 12px;
+                background-color: #f0f2f5;
+                & .comment-name {
+                    font-weight: 400;
+                    margin-bottom: 0.8rem;
+                    font-size: var(--n);
+                }
+                & .comment-li1 {
+                }
+                & .comment-span {
+                    width: 100%;
+                    font-size: var(--ms);
+                }
+            }
+        }
+    }
+}
+
+.btn-send {
+    background-color: #84e852;
+    padding: 1rem;
+    width: 8rem;
+    border-radius: 5px;
+    font-weight: 600;
+}
+.btn-delete {
+    position: absolute;
+    background-color: #ec0a2c;
+    padding-inline: 1rem;
+    padding-block: 0.5rem;
+    width: 6rem;
+    right: 0;
+    bottom: -1rem;
+    color: var(--text-color-white);
+    border-radius: 5px;
+    font-weight: 500;
+}
+.thongtin {
+    display: flex;
+    flex-direction: column;
+    font-size: var(--l);
+    gap: 15px;
+    padding-left: 3rem;
+    font-weight: 600;
+
+    .link-icon {
+        display: flex;
+        .icon-icon {
+            color: #42aaf5;
+            margin-right: 2rem;
+            font-size: 3rem;
+            box-shadow: 1px 1px 13px 1px #fff;
+            padding: 2rem;
+            background-color: #f0f2f5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        :hover {
+            background-color: #42aaf5;
+            color: #fff;
+        }
+    }
+}
+@media only screen and (max-width: 1000px) {
+    .input {
+        background-color: lightblue;
+        width: 100%;
+    }
+    .container-commnet {
+        max-width: 100%;
+        min-width: 100%;
+    }
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+    .thongtin {
+        width: 100%;
+        padding: 0;
+    }
+}

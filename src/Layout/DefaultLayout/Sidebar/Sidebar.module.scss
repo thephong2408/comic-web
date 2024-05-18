@@ -1,0 +1,11 @@
+.wapper {
+    background-color: blue;
+    height: auto;
+    width: 100%;
+    background-color: transparent;
+    display: grid;
+    //nav
+    & .theloai {
+        padding-block: 2rem;
+    }
+}

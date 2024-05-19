@@ -36,10 +36,12 @@
     box-sizing: border-box;
 }
 .container-commnet {
+    padding-left: 1rem;
     margin-top: 5rem;
     width: 100%;
+    min-height: 20rem;
     max-height: 50rem;
-    overflow: scroll;
+    overflow-y: auto;
     display: flex;
     justify-content: space-between;
     color: #000;
@@ -79,7 +81,8 @@
                 }
                 & .comment-span {
                     width: 100%;
-                    font-size: var(--ms);
+                    font-size: var(--mss);
+                    color: #515050;
                 }
             }
         }

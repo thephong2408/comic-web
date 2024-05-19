@@ -199,9 +199,12 @@ li {
         justify-content: space-between;
         border: 1px solid #fff;
         margin-block: 5px;
+        margin-inline: 3rem;
         cursor: pointer;
         &:hover {
             background-color: #9e00fa;
+            transform: scale(1.1);
+            margin-inline: 5rem;
         }
         .li-list2 {
             font-size: var(--ms);

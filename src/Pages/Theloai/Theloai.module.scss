@@ -45,10 +45,15 @@
                     padding-left: 10px;
                     padding-right: 10px;
                     font-size: 1rem;
-                    background-color: var(--background-color-black);
+                    background-color: var(--background-color-card);
                     color: var(--text-color-white);
                     display: flex;
                     justify-content: space-between;
+                    .icon {
+                        span {
+                            opacity: 0.6;
+                        }
+                    }
                 }
             }
             .information {

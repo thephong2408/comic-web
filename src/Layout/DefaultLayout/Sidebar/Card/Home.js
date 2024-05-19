@@ -97,14 +97,14 @@ function Home() {
                                         <img className={cx('img1')} alt="ảnh" src={post.url} />
                                     </Link>
                                     <div className={cx('hits')}>
-                                        <span>
-                                            <FontAwesomeIcon icon={faEye} />
+                                        <span className={cx('icon')}>
+                                            <FontAwesomeIcon icon={faEye} /> <span>1k</span>
                                         </span>
-                                        <span>
-                                            <FontAwesomeIcon icon={faComment} />
+                                        <span className={cx('icon')}>
+                                            <FontAwesomeIcon icon={faComment} /> <span>100</span>
                                         </span>
-                                        <span>
-                                            <FontAwesomeIcon icon={faHeart} />
+                                        <span className={cx('icon')}>
+                                            <FontAwesomeIcon icon={faHeart} /> <span>1k</span>
                                         </span>
                                     </div>
                                 </div>

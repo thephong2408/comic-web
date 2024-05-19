@@ -3,7 +3,6 @@ import classNames from 'classnames/bind';
 import 'tippy.js/dist/tippy.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHouse } from '@fortawesome/free-solid-svg-icons';
-import { Link } from 'react-router-dom';
 
 import styles from './Nav.module.scss';
 import { API } from '~/API';
@@ -93,9 +92,9 @@ function Nav() {
                             <div className={cx('div-category')}>
                                 <nav className={cx('nav1')}>
                                     {allGenres.map((genre, index) => (
-                                        <Link to={`/${genre}`} key={index}>
+                                        <a href={`/${genre}`} key={index}>
                                             <li className={cx('list')}>{genre}</li>
-                                        </Link>
+                                        </a>
                                     ))}
                                 </nav>
                             </div>

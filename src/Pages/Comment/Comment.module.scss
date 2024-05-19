@@ -30,7 +30,9 @@
     margin: 5px 0;
     border-radius: 4px;
     margin-top: 1rem;
-    border: 1px solid #ccc;
+    border: none;
+    box-shadow: 1px 1px 5px 1px #727272;
+    background-color: #fff;
     box-sizing: border-box;
 }
 .container-commnet {
@@ -67,7 +69,7 @@
                 margin-left: 6rem;
                 padding: 1rem;
                 border-radius: 12px;
-                background-color: #f0f2f5;
+                background-color: #ffffff;
                 & .comment-name {
                     font-weight: 400;
                     margin-bottom: 0.8rem;
@@ -130,6 +132,16 @@
         }
     }
 }
+.input,
+.btn-send {
+    outline: none; /* Loại bỏ viền mặc định khi nhấn vào */
+}
+
+.input:focus,
+.btn-send:focus {
+    outline: none; /* Đảm bảo không có viền khi phần tử đang được focus */
+}
+
 @media only screen and (max-width: 1000px) {
     .input {
         background-color: lightblue;

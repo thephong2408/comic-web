@@ -17,7 +17,7 @@
             }
             .nav-title-li-home {
                 &:hover {
-                    color: #ffffff;
+                    color: var(--text-color-white);
                 }
             }
             .nav-title-li2 {
@@ -25,7 +25,7 @@
                 font-weight: 600;
                 padding-top: 1.5rem;
                 padding-inline: 1.5rem;
-                color: #7c7c7b;
+                color: var(--text-color-band);
             }
         }
     }
@@ -44,7 +44,7 @@
     margin: 1rem;
     background-color: var(--background-color--white);
     &:hover {
-        color: #fff;
+        color: var(--text-color-white);
         background-color: var(--background-color-black);
     }
 }
@@ -53,8 +53,8 @@
     border-radius: 5px;
     margin: 1rem;
 
-    box-shadow: 1px 1px 13px 1px #fff;
-    color: #fff;
+    box-shadow: 1px 1px 13px 1px var(--color-white);
+    color: var(--text-color-white);
     font-size: 1.8rem;
     font-weight: 600;
     min-width: 12rem;
@@ -107,7 +107,7 @@
         position: absolute;
         top: 4.5rem;
         left: 0;
-        color: #000;
+        color: var(--text-color-dark);
         overflow: auto;
         max-height: 30rem;
         width: 100%;
@@ -117,13 +117,13 @@
             width: 100%;
 
             .li-chapters {
-                border-bottom: 1px solid var(--color-band-s);
+                border-bottom: 1px solid var(--color-white);
                 margin-top: 0rem;
                 padding-block: 1rem;
                 cursor: pointer;
                 &:hover {
                     background: linear-gradient(to right, #a742f5, #42aaf5);
-                    color: #fff;
+                    color: var(--text-color-white);
                 }
                 span {
                     padding: 1rem;

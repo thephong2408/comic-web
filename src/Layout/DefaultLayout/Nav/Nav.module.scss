@@ -39,11 +39,10 @@ nav.navbar {
         text-align: center;
         &:hover {
             background: linear-gradient(360deg, #3d01f3, #079fe0);
-            color: #fffefe;
+            color: var(--text-color-white);
         }
     }
     .home {
-        color: var(--color-iconhome);
         font-size: var(--l);
     }
 
@@ -53,14 +52,14 @@ nav.navbar {
         height: 4.5rem;
         font-weight: 600;
         color: var(--text-color-dark);
-        border-right: solid 1px #ffffff;
+        border-right: solid 1px var(--color-white);
         position: relative;
         display: flex;
         justify-content: center;
         align-items: center;
         text-align: center;
         background: linear-gradient(360deg, #3d01f3, #079fe0);
-        color: #ffffff;
+        color: var(--text-color-white);
     }
 }
 // tippy-- amouse
@@ -79,7 +78,7 @@ nav.navbar {
     flex-wrap: wrap;
     .nav1 {
         display: flex;
-        color: #ffffff;
+        color: var(--text-color-white);
         width: 40rem;
         flex-wrap: wrap;
         justify-content: space-between;
@@ -88,7 +87,7 @@ nav.navbar {
             padding: 1rem;
             width: 13rem;
             &:hover {
-                color: #f72307;
+                color: var(--hover-red);
                 background-color: var(--hover-nav);
             }
         }
@@ -109,16 +108,16 @@ nav.navbar {
 .warning {
     display: flex;
     align-items: center;
-    border: 1px solid var(--background-color-warning);
-    background-color: var(--background-color-warning);
+    border: 1px solid var(--background-color--white);
+    background-color: var(--background-color--white);
     height: 3.5rem;
     & span {
         margin-left: 2rem;
-        color: var(--background-color-warning);
+        color: var(--background-color--white);
     }
     & button {
         color: var(--text-color-white);
-        background-color: var(--background-color-warning);
+        background-color: var(--background-color--white);
         font-size: var(--l);
         height: 100%;
         width: 5rem;

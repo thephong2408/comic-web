@@ -47,7 +47,7 @@
     & .icon-rank {
         font-size: 3rem;
         text-shadow: 2px 2px 4px rgb(237, 104, 104);
-        color: #dc2626;
+        color: var(--text-color-red);
         font-weight: 600;
     }
 }
@@ -71,7 +71,7 @@
         color: var(--text-color-band);
     }
     a {
-        color: var(--text-color-band-s);
+        color: var(--text-color-band);
     }
 }
 .times {
@@ -123,7 +123,7 @@
         & .icon-rank {
             font-size: 8rem;
             text-shadow: 2px 2px 4px rgb(237, 104, 104);
-            color: #dc2626;
+            color: var(--text-color-red);
             font-weight: 600;
         }
     }

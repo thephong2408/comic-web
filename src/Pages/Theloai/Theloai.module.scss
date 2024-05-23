@@ -1,6 +1,6 @@
 //gird
 .wrapper2 {
-    background-color: #322c2c;
+    background-color: var(--background-color--body);
 
     height: 100vh;
 }
@@ -79,11 +79,11 @@
                         padding-block: 0.5rem;
                         .chap {
                             font-size: var(--m);
-                            color: #9b9797;
+                            color: var(--text-color-band);
                         }
                         .time {
                             font-size: var(--ms);
-                            color: #9b9797;
+                            color: var(--text-color-band);
                         }
                     }
                 }

@@ -40,7 +40,7 @@ th {
     border-bottom: 1px solid blanchedalmond;
 }
 td:hover {
-    color: #e1f106;
+    color: var(--hover-yellow);
     background-color: rgb(126, 121, 121);
 }
 .theloai {
@@ -50,7 +50,7 @@ td:hover {
     width: auto;
 }
 .title:hover {
-    color: #e1f106;
+    color: var(--hover-yellow);
 }
 
 // search

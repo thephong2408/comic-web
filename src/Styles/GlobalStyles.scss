@@ -2,45 +2,29 @@
 
 :root {
     //color
-
+    --color-title: #007aff;
     --color-dark: #333;
     --color-white: #fff;
-    --color-band: #989292;
-    --color-band-s: #c1bdbd;
 
     //text
     --text-color-dark: #333;
-    --text-color-white: #fff;
     --text-color-band: #989292;
-    --text-color-band-s: #c1bdbd;
-    --text-color-band-ss: #eee5e5;
-    --text-color-rank: #000000;
+    --text-color-red: red;
 
     //hover
     --hover-nav: #ebe2e2;
-    --hover-pagination: #aaa2a2;
+    --hover-red: red;
+    --hover-yellow: #e1f106;
 
     //Backgroud
-    --color-iconhome: rgb(255, 166, 0);
-    --background-color-home: #19dd0e;
-
-    --background-color--body: #f3eeee;
+    --background-color--body: #322c2c;
     --background-color--white: #fff;
     --background-color-black: #000000;
-    --background-color-warning: #fff;
     --background-color-nav: #c2baba;
-
-    --background-color: #fff;
-    //Backgroud-defaultLayout
-    // nav
-    ////Background-Warning
+    --background-color--chap: aqua;
     --background-boder-color-warning: #e3260c;
-    ////Background-car
     --background-color-card: rgba(0, 0, 0, 0.5);
-    // ///Background-rank
     --background-color-rank: #e3ef06;
-    ////Background-footer
-    --background-color-footer: #d8cccc;
 
     //font-size
     --xxll: 4rem;

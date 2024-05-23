@@ -55,7 +55,7 @@
     display: flex;
     font-size: var(--mss);
     align-items: center;
-    color: var(--text-color-band-s);
+    color: var(--text-color-band);
     & span {
         margin-right: 0.5rem;
     }
@@ -64,7 +64,7 @@
 .chap {
     position: absolute;
     bottom: 0;
-    color: var(--text-color-band-s);
+    color: var(--text-color-band);
     & span {
         margin-right: 0.5rem;
     }

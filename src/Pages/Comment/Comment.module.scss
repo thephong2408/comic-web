@@ -32,8 +32,8 @@
     margin-top: 1rem;
     border: none;
     box-shadow: 1px 1px 5px 1px #727272;
-    background-color: var(--background-color--white);
     box-sizing: border-box;
+    background-color: var(--background-color--white);
 }
 .container-commnet {
     padding-left: 1rem;
@@ -147,7 +147,6 @@
 
 @media only screen and (max-width: 1000px) {
     .input {
-        background-color: lightblue;
         width: 100%;
     }
     .container-commnet {

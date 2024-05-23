@@ -815,7 +815,7 @@ export const API = [
         theodoi: 'yes',
         lichsu: [{ chap: 1 }, { xem: 'yes' }],
         luotxem: 100000,
-        theloai: ['giấu nghề', 'xuyên không', 'học duong'],
+        theloai: ['giấu nghề', 'xuyên không', 'học đường'],
         tacgia: 'tac gia',
         noidung:
             'Yasuo, một lãnh đạo tài năng và người giữ chìa khóa của những bí mật thần bí về tinh thần gió, bị kết án oan vì cáo buộc giết chết thầy trò của mình. Trong sự hoảng loạn và sự tuyệt vọng, Yasuo bỏ trốn, trở thành một kẻ lang thang trên đường phủ sóng bằng gió.',
@@ -1696,7 +1696,7 @@ export const API = [
         theodoi: 'yes',
         lichsu: [{ chap: 1 }, { xem: 'yes' }],
         luotxem: 100000,
-        theloai: ['giấu nghề', 'xuyên không', 'học duong'],
+        theloai: ['giấu nghề', 'xuyên không', 'học đường'],
         tacgia: 'tac gia',
         noidung:
             'Yasuo, một lãnh đạo tài năng và người giữ chìa khóa của những bí mật thần bí về tinh thần gió, bị kết án oan vì cáo buộc giết chết thầy trò của mình. Trong sự hoảng loạn và sự tuyệt vọng, Yasuo bỏ trốn, trở thành một kẻ lang thang trên đường phủ sóng bằng gió.',

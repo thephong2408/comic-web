@@ -22,14 +22,14 @@
         justify-content: center;
         & .menu-nav {
             display: flex;
-            justify-content: space-between;
+            justify-content: flex-start;
             width: 100%;
             flex-wrap: wrap;
             background-color: white;
             padding: 2rem;
 
             & .menu-ul {
-                width: 15rem;
+                width: 17rem;
                 display: flex;
                 align-items: center;
                 & .menu-item {

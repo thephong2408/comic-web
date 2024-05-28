@@ -24,7 +24,6 @@ h3 {
     background-color: rgba(0, 0, 0, 0.5); /* Màu đen trong suốt */
 }
 .swiper-slide {
-    text-align: center;
     background: var(--background-color--white);
     min-width: 20rem;
     max-width: 22rem;

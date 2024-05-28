@@ -12,6 +12,9 @@ img {
     padding-inline: 20px;
     justify-content: flex-start;
     width: 100%;
+    white-space: nowrap; /* Ngăn văn bản xuống dòng */
+    overflow: hidden; /* Ẩn phần văn bản vượt ra ngoài vùng chứa */
+    text-overflow: ellipsis; /* Thay thế phần văn bản vượt ra bằng dấu ba chấm */
     height: 5rem;
     bottom: 0rem;
     color: #fff;

@@ -41,7 +41,7 @@ function Chapter() {
     }, [chap, posts]);
 
     useEffect(() => {
-        if (parseInt(chap) > 1) {
+        if (parseInt(chap) >= 2) {
             setChapbtoot(parseInt(chap) - 1);
         }
     }, [chap]);
@@ -121,8 +121,8 @@ function Chapter() {
                             {show && (
                                 <div className={cx('div-chapter')}>
                                     <ul className={cx('ul-chapters')}>
-                                        {post.sochuong.map((chapter, index) => (
-                                            <a href={`/comicbookcover/${post.name}/${chapter.chap}`}>
+                                        {post.sochuong.map((chapter) => (
+                                            <a href={`/comicbookcover/${post.name}/${chapter.chap}`} key={chapter.chap}>
                                                 <li key={index} className={cx('li-chapters')}>
                                                     <span> chap {chapter.chap}</span>
                                                 </li>

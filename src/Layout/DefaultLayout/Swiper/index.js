@@ -61,7 +61,7 @@ export default function Swiper1() {
                 slidesPerView={slidesPerView}
                 spaceBetween={30}
                 navigation={true}
-                loop={true}
+          names      loop={true}
                 virtual
             >
                 {posts
@@ -76,7 +76,7 @@ export default function Swiper1() {
                                     </Link>
                                     <div className={cx('name')}>
                                         <p>
-                                            <span className={cx('names')}>{post.name}</span>
+                                            <span className={cx('')}>{post.name}</span>
                                             <span className={cx('chap')}> số chap {post.sochuong.length}</span>
                                         </p>
                                     </div>

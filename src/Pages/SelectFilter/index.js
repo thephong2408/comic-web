@@ -38,16 +38,16 @@ function SelectFilter() {
         // Kiểm tra nếu không có thể loại nào được chọn
         setShow(filteredResults.length === 0);
     }, [selectedGenres, posts]);
+
+    // useEffect(() => {
+    //     const allGenres = API.reduce((acc, story) => [...acc, ...story.theloai], []);
+    //     const uniqueGenres = Array.from(new Set(allGenres));
+    //     // Kiểm tra nếu không có thể loại nào
+    //     setShow(uniqueGenres.length === 0);
+    // }, []);
+
     const allGenres = API.reduce((acc, story) => [...acc, ...story.theloai], []);
     const uniqueGenres = Array.from(new Set(allGenres));
-
-    useEffect(() => {
-        const allGenres = API.reduce((acc, story) => [...acc, ...story.theloai], []);
-        const uniqueGenres = Array.from(new Set(allGenres));
-
-        // Kiểm tra nếu không có thể loại nào
-        setShow(uniqueGenres.length === 0);
-    }, []);
 
     return (
         <div className={cx('wrapper')}>

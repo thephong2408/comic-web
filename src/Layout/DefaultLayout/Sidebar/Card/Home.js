@@ -114,11 +114,7 @@ function Home() {
                                         {post.sochuong.slice(-3).map((chapterObj, index) => (
                                             <Link key={index} to={`/comicbookcover/${post.name}/${chapterObj.chap}`}>
                                                 <ul className={cx('information-ul')}>
-                                                    <li>
-                                                        <a href="/" className={cx('chapter')}>
-                                                            chap {chapterObj.chap}
-                                                        </a>
-                                                    </li>
+                                                    <li>chap {chapterObj.chap}</li>
                                                     <li>
                                                         <span> thời gian</span>
                                                     </li>

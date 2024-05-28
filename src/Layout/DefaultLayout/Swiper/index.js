@@ -61,7 +61,6 @@ export default function Swiper1() {
                 slidesPerView={slidesPerView}
                 spaceBetween={30}
                 navigation={true}
-                names
                 loop={true}
                 virtual
             >

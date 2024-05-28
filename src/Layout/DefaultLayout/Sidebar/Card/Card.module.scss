@@ -60,13 +60,12 @@
     margin-top: 1rem;
     & nav {
         & ul {
-        }
-        & a {
-            font-size: var(--m);
-        }
-        & span {
-            color: var(--text-color-band);
-            font-size: var(--mss);
+            & li {
+                font-size: var(--m);
+                & span {
+                    font-size: var(--ms);
+                }
+            }
         }
     }
 }

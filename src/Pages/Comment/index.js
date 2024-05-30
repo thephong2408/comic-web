@@ -32,7 +32,7 @@ function Comment() {
 
     return (
         <div className={cx('wrapper')}>
-            <div>
+            <div className={cx('comment')}>
                 <span className={cx('title')}>Bình Luận</span>
 
                 <form className={cx('container')} onSubmit={handleSubmit}>

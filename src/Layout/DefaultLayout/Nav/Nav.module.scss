@@ -22,14 +22,17 @@ nav.navbar {
     display: flex;
     height: 4.5rem;
     align-items: center;
+
     background-color: rgb(106, 0, 255);
     background: linear-gradient(180deg, #a742f5, #c5669e);
     border: none;
+
     .nav_li {
         width: 12rem;
         padding: 1rem;
         height: 4.5rem;
-        font-weight: 600;
+        font-weight: 700;
+        font-size: var(--ms);
         color: var(--text-color-dark);
         border-right: solid 1px #ffffff;
         position: relative;
@@ -55,6 +58,7 @@ nav.navbar {
         border-right: solid 1px var(--color-white);
         position: relative;
         display: flex;
+        font-size: var(--ms);
         justify-content: center;
         align-items: center;
         text-align: center;
@@ -121,30 +125,5 @@ nav.navbar {
         font-size: var(--l);
         height: 100%;
         width: 5rem;
-    }
-}
-
-@media only screen and (max-width: 1200px) {
-    .men {
-        display: none;
-    }
-}
-@media only screen and (max-width: 1000px) {
-    .girl {
-        display: none;
-    }
-    .rank-li {
-        display: none;
-    }
-}
-
-@media only screen and (max-width: 900px) {
-    .search {
-        display: none;
-    }
-}
-@media only screen and (max-width: 700px) {
-    .nav {
-        display: none;
     }
 }

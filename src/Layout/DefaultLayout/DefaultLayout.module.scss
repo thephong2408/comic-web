@@ -5,7 +5,6 @@
 .wrapper-container {
     background-color: var(--background-color--white);
     padding: 2rem;
-    margin-inline: 20rem;
     font-size: var(--ms);
 
     & nav {
@@ -109,7 +108,6 @@
 .container {
     padding: 2rem;
     background-color: var(--background-color--white);
-    margin-inline: 20rem;
     display: flex;
     justify-content: space-between;
 }
@@ -129,53 +127,114 @@
     padding: 3rem;
 }
 // tích hợp màn hình
+//
+.warning {
+    color: red;
+    background-color: var(--background-color--white);
+    display: flex;
+    font-size: var(--n);
+    border: 1px solid var(--background-boder-color-warning);
+    align-items: center;
+    & button {
+        padding: 1rem;
+        font-size: var(--m);
+        color: var(--text-color-white);
+        background-color: var(--background-boder-color-warning);
+        margin-right: 1rem;
+        height: 100%;
+    }
+}
 
-@media only screen and (max-width: 1400px) {
-    .content {
-        width: 100%;
-        margin-top: 5.4rem;
+.div-container {
+    margin-inline: 20rem;
+}
+
+/* Screen width >= 576px and < 768px: 3 slides per view */
+@media (max-width: 576px) {
+    .div-container {
+        margin: 0;
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
     }
     .sidebar {
         width: 100%;
     }
-    .wrapper-container {
-        margin-inline: 4rem;
+    .content {
+        width: 100%;
     }
-
-    .container {
-        flex-direction: column;
+}
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .div-container {
         margin: 0;
-        margin-inline: 4rem;
-    }
-}
-@media only screen and (max-width: 1200px) {
-    .men {
-        display: none;
-    }
-}
-@media only screen and (max-width: 1000px) {
-    .girl,
-    .rank-li {
-        display: none;
-    }
-
-    .wrapper-container {
-        margin-inline: 2rem;
     }
     .container {
-        margin-inline: 2rem;
+        display: flex;
+        flex-direction: column;
+    }
+    .sidebar {
+        width: 100%;
+    }
+    .content {
+        width: 100%;
     }
 }
 
-@media only screen and (max-width: 900px) {
-    .search {
-        display: none;
+/* Screen width >= 768px and < 992px: 3 slides per view */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .div-container {
+        margin: 0;
     }
-}
-@media only screen and (max-width: 700px) {
-    .nav {
-        display: none;
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+    .sidebar {
+        width: 100%;
+    }
+    .content {
+        width: 100%;
     }
 }
 
-// tippy
+/* Screen width >= 992px and < 1200px: 4 slides per view */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .div-container {
+        margin-inline: 5rem;
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+    .sidebar {
+        width: 100%;
+    }
+    .content {
+        width: 100%;
+    }
+}
+
+/* Screen width >= 1200px and < 1400px: 5 slides per view */
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+    .div-container {
+        margin-inline: 10rem;
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+    .sidebar {
+        width: 100%;
+    }
+    .content {
+        width: 100%;
+    }
+}
+
+/* Screen width >= 1400px: 6 slides per view */
+@media (min-width: 1400px) {
+    .div-container {
+        margin-inline: 20rem;
+    }
+}

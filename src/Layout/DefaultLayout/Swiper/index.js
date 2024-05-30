@@ -22,13 +22,15 @@ export default function Swiper1() {
 
             // Xác định số lượng slidesPerView dựa trên kích thước của màn hình
             let newSlidesPerView;
-            if (screenWidth >= 1200) {
+            if (screenWidth >= 1400) {
                 newSlidesPerView = 6;
-            } else if (screenWidth >= 1000 && screenWidth < 1400) {
+            } else if (screenWidth >= 1200 && screenWidth < 1400) {
                 newSlidesPerView = 5;
-            } else if (screenWidth >= 800 && screenWidth < 100) {
+            } else if (screenWidth >= 992 && screenWidth < 1200) {
                 newSlidesPerView = 4;
-            } else if (screenWidth >= 600 && screenWidth < 800) {
+            } else if (screenWidth >= 768 && screenWidth < 992) {
+                newSlidesPerView = 3;
+            } else if (screenWidth >= 576 && screenWidth < 768) {
                 newSlidesPerView = 3;
             } else {
                 newSlidesPerView = 2;

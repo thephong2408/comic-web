@@ -4,12 +4,10 @@
     width: 100%;
     flex: 1;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); // Thiết lập cột động
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     grid-gap: 1rem; // Khoảng cách giữa các phần tử
 }
 .wrapper {
-    margin-inline: 20rem;
-    margin-block: 1rem;
     min-height: 100vh;
     background-color: var(--background-color--white);
     .title {
@@ -117,39 +115,5 @@
                 }
             }
         }
-    }
-}
-
-@media only screen and (max-width: 1400px) {
-    .gird {
-        grid-template-columns: auto auto auto auto auto auto;
-    }
-}
-
-@media only screen and (max-width: 1200px) {
-    .gird {
-        grid-template-columns: auto auto auto auto auto;
-    }
-}
-@media only screen and (max-width: 900px) {
-    .gird {
-        grid-template-columns: auto auto auto;
-    }
-}
-@media only screen and (max-width: 700px) {
-    .gird {
-        grid-template-columns: auto auto;
-    }
-}
-
-@media only screen and (max-width: 1400px) {
-    .wrapper {
-        margin-inline: 4rem;
-    }
-}
-
-@media only screen and (max-width: 1000px) {
-    .wrapper {
-        margin-inline: 2rem;
     }
 }

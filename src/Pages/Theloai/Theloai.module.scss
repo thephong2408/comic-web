@@ -1,11 +1,9 @@
 //gird
 .wrapper2 {
     background-color: var(--background-color--body);
-
     height: 100vh;
 }
 .wrapper1 {
-    margin-inline: 20rem;
     height: 100vh;
     background-color: var(--background-color--white);
     padding-inline: 2rem;
@@ -20,19 +18,19 @@
 }
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); // Thiết lập cột động
-    grid-gap: 1rem; // Khoảng cách giữa các phần tử
+    // Khoảng cách giữa các phần tử
     .wrapper {
         padding: 10px;
         height: auto;
         .card {
             min-width: 15rem;
-            max-width: 20rem;
+            max-width: 25rem;
             height: auto;
             .img {
                 position: relative;
+                width: 100%;
                 height: 20rem;
-                .img1 {
+                img {
                     width: 100%;
                     height: 100%;
                 }
@@ -91,36 +89,42 @@
         }
     }
 }
-
-@media only screen and (max-width: 1400px) {
-    .gird {
-        grid-template-columns: auto auto auto auto auto auto;
+/* Screen width >= 576px and < 768px: 3 slides per view */
+@media (max-width: 576px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
-@media only screen and (max-width: 1200px) {
-    .gird {
-        grid-template-columns: auto auto auto auto auto;
-    }
-}
-@media only screen and (max-width: 900px) {
-    .gird {
-        grid-template-columns: auto auto auto;
-    }
-}
-@media only screen and (max-width: 700px) {
-    .gird {
-        grid-template-columns: auto auto;
+/* Screen width >= 768px and < 992px: 3 slides per view */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .grid {
+        grid-template-columns: repeat(4, 1fr);
     }
 }
 
-@media only screen and (max-width: 1400px) {
-    .wrapper1 {
-        margin-inline: 4rem;
+/* Screen width >= 992px and < 1200px: 4 slides per view */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .grid {
+        grid-template-columns: repeat(4, 1fr);
     }
 }
-@media only screen and (max-width: 1000px) {
-    .wrapper1 {
-        margin-inline: 2rem;
+
+/* Screen width >= 1200px and < 1400px: 5 slides per view */
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+    .grid {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+/* Screen width >= 1400px: 6 slides per view */
+@media (min-width: 1400px) {
+    .grid {
+        grid-template-columns: repeat(6, 1fr);
     }
 }

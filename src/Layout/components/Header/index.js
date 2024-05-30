@@ -151,7 +151,7 @@ function Header() {
                     </div>
                 </div>
             </div>
-            <div className={cx('wapper1')}>
+            {/* <div className={cx('wapper1')}>
                 <Nav />
                 <div className={cx('warning')}>
                     <button>
@@ -159,7 +159,7 @@ function Header() {
                     </button>
                     <span>không truy cập web giả mạo để tránh mất tài khoản</span>
                 </div>
-            </div>
+            </div> */}
         </div>
     );
 }

@@ -107,6 +107,8 @@ img {
     width: 100%; /* Kích thước hình ảnh sẽ phù hợp với chiều rộng của div */
     height: auto; /* Giữ tỷ lệ khung hình */
     cursor: pointer;
+
+    object-fit: cover;
 }
 a {
     cursor: pointer;

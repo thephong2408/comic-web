@@ -19,7 +19,7 @@
 .sign-on {
     z-index: 2;
     height: auto;
-    width: 60rem;
+    // width: 60rem;
     padding: 2rem;
     background-color: rgba(167, 155, 155, 0.1);
     box-shadow: 1px 1px 13px 1px #b26ace;
@@ -138,4 +138,20 @@ input {
 }
 .div-other-title {
     padding: 2rem;
+}
+@media (max-width: 1000px) {
+    .sign-on {
+        width: 100%;
+    }
+    .wrapper {
+        padding: 5rem;
+    }
+}
+@media (max-width: 568px) {
+    .sign-on {
+        width: 100%;
+    }
+    .wrapper {
+        padding: 1rem;
+    }
 }

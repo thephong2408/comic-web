@@ -1,13 +1,12 @@
 import classNames from 'classnames/bind';
 import styles from './Header.module.scss';
 import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faCircleInfo, faComment, faLightbulb, faXmark } from '@fortawesome/free-solid-svg-icons';
 
 import SearchInput from './Search/SearchInput';
-import Nav from '~/Layout/DefaultLayout/Nav';
 
 const cx = classNames.bind(styles);
 
@@ -57,9 +56,9 @@ function Header() {
     // };
 
     const [ismenu, setIsMenu] = useState(true);
-
+    const location = useLocation(); // Hook to get current location
+    const currentUrl = location.pathname; // Get the current URL
     useEffect(() => {
-        const currentUrl = window.location.href;
         const parts = currentUrl.split('/');
         const titlePart = parts.pop();
 
@@ -139,14 +138,14 @@ function Header() {
                         </nav>
 
                         {!ismenu && (
-                            <a href="/menu">
+                            <Link to="/menu">
                                 <FontAwesomeIcon className={cx('menu')} icon={faBars} />
-                            </a>
+                            </Link>
                         )}
                         {ismenu && (
-                            <a href="/">
+                            <Link to="/">
                                 <FontAwesomeIcon className={cx('menu')} icon={faXmark} />
-                            </a>
+                            </Link>
                         )}
                     </div>
                 </div>

@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faXmark } from '@fortawesome/free-solid-svg-icons';
 import { faDiscord, faFacebook, faGoogle, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import { hashed_password } from '~/taikhoanmatkhau';
+import { Link } from 'react-router-dom';
 
 const cx = classNames.bind(styles);
 
@@ -71,11 +72,11 @@ function Signon() {
         <div className={cx('wrapper')}>
             {/* Đăng kí */}
             <div className={cx('sign-on')}>
-                <a href="/">
+                <Link to="/">
                     <button className={cx('return')}>
                         <FontAwesomeIcon icon={faXmark} />
                     </button>
-                </a>
+                </Link>
                 <form onSubmit={handleSignUp}>
                     <h2>Đăng Kí</h2>
 

@@ -5,6 +5,7 @@ import classNames from 'classnames/bind';
 import Item from '../Item';
 import styles from './SearchInput.module.scss';
 import { API } from '~/API';
+import { Link } from 'react-router-dom';
 import SearchResult from '~/Pages/SearchResult';
 
 const cx = classNames.bind(styles);
@@ -30,7 +31,6 @@ function SearchInput() {
         const filteredResults = API.filter((item) => {
             return item.name.toLowerCase().includes(searchValue.toLowerCase());
         });
-
         setSearchResults(filteredResults);
     }, [searchValue]);
 
@@ -59,9 +59,13 @@ function SearchInput() {
                 )}
 
                 <button className={cx('search-btn')}>
-                    <a href={`/searchresult/${searchValue}`}>
-                        <FontAwesomeIcon className={cx('search-btn-btn')} icon={faMagnifyingGlass} />
-                    </a>
+                    <Link to={`/searchresult/${searchValue}`}>
+                        <FontAwesomeIcon
+                            onClick={handleDelete}
+                            className={cx('search-btn-btn')}
+                            icon={faMagnifyingGlass}
+                        />
+                    </Link>
                 </button>
 
                 {searchResults && searchResults.length > 0 && searchValue.length > 0 && (

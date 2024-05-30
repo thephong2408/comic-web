@@ -1,6 +1,6 @@
 import classNames from 'classnames/bind';
 import styles from './Upload.module.scss';
-
+import { Link } from 'react-router-dom';
 import Table from 'react-bootstrap/Table';
 import { useState, useEffect } from 'react';
 
@@ -10,18 +10,12 @@ const cx = classNames.bind(styles);
 
 function Upload() {
     const [posts, setPosts] = useState([]);
-
     useEffect(() => {
         setPosts(API);
     }, []);
-    const allGenres = posts.reduce((acc, current) => {
-        current.theloai.forEach((genre) => {
-            if (!acc.includes(genre)) {
-                acc.push(genre);
-            }
-        });
-        return acc;
-    }, []);
+
+    const allGenres = Array.from(new Set(posts.flatMap((post) => post.theloai)));
+
     const [show, setShow] = useState(false);
     const [show1, setShow1] = useState(false);
     return (
@@ -30,30 +24,30 @@ function Upload() {
                 <nav>
                     <ul>
                         <li className={cx('li-li')}>
-                            <a className={cx('title')} href="/" aria-label="Link Description">
+                            <Link className={cx('title')} to="/" aria-label="Link Description">
                                 TRANG CHỦ
-                            </a>
+                            </Link>
                         </li>
                     </ul>
                     <ul>
                         <li className={cx('li-li')}>
-                            <a className={cx('title')} href="/hot" aria-label="Link Description">
+                            <Link className={cx('title')} to="/hot" aria-label="Link Description">
                                 HOT
-                            </a>
+                            </Link>
                         </li>
                     </ul>
                     <ul>
                         <li className={cx('li-li')}>
-                            <a className={cx('title')} href="/theodoi" aria-label="Link Description">
+                            <Link className={cx('title')} to="/theodoi" aria-label="Link Description">
                                 THEO DÕI
-                            </a>
+                            </Link>
                         </li>
                     </ul>
                     <ul>
                         <li className={cx('li-li')}>
-                            <a className={cx('title')} href="/lichsu" aria-label="Link Description">
+                            <Link className={cx('title')} to="/lichsu" aria-label="Link Description">
                                 LỊCH SỬ
-                            </a>
+                            </Link>
                         </li>
                     </ul>
                     <ul>
@@ -71,9 +65,9 @@ function Upload() {
                                         <tbody>
                                             <tr>
                                                 {allGenres.map((genre, index) => (
-                                                    <a href={`/${genre}`} key={index}>
+                                                    <Link to={`/${genre}`} key={index}>
                                                         <td>{genre}</td>
-                                                    </a>
+                                                    </Link>
                                                 ))}
                                             </tr>
                                         </tbody>
@@ -121,25 +115,25 @@ function Upload() {
 
                     <ul>
                         <li className={cx('li-li')}>
-                            <a className={cx('title')} href="/chonloc" aria-label="Link Description">
+                            <Link className={cx('title')} to="/chonloc" aria-label="Link Description">
                                 TÌM TRUYỆN
-                            </a>
+                            </Link>
                         </li>
                     </ul>
                 </nav>
                 <nav className={cx('sign')}>
                     <ul>
                         <li className={cx('li-li')}>
-                            <a className={cx('title')} href="/signin">
+                            <Link className={cx('title')} to="/signin">
                                 Đăng nhập
-                            </a>
+                            </Link>
                         </li>
                     </ul>
                     <ul>
                         <li className={cx('li-li')}>
-                            <a className={cx('title')} href="/signon">
+                            <Link className={cx('title')} to="/signon">
                                 Đăng Kí
-                            </a>
+                            </Link>
                         </li>
                     </ul>
                 </nav>

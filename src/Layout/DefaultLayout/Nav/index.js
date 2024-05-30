@@ -3,7 +3,7 @@ import classNames from 'classnames/bind';
 import 'tippy.js/dist/tippy.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHouse } from '@fortawesome/free-solid-svg-icons';
-
+import { Link, useLocation } from 'react-router-dom';
 import styles from './Nav.module.scss';
 import { API } from '~/API';
 
@@ -13,20 +13,12 @@ const cx = classNames.bind(styles);
 
 function Nav() {
     const [posts, setPosts] = useState([]);
-
-    const allGenres = posts.reduce((acc, current) => {
-        current.theloai.forEach((genre) => {
-            if (!acc.includes(genre)) {
-                acc.push(genre);
-            }
-        });
-        return acc;
-    }, []);
-
     // Lấy API
     useEffect(() => {
         setPosts(API);
     }, []);
+
+    const allGenres = Array.from(new Set(posts.flatMap((post) => post.theloai)));
 
     //folollow
     const [isTheodoi, setIsTheodoi] = useState(false);
@@ -40,8 +32,9 @@ function Nav() {
     // Hàm xử lý sự kiện khi button được foww
 
     // Sử dụng useEffect để theo dõi thay đổi của URL
+    const location = useLocation(); // Hook to get current location
+    const currentUrl = location.pathname; // Get the current URL
     useEffect(() => {
-        const currentUrl = window.location.href;
         const parts = currentUrl.split('/');
         const titlePart = parts.pop();
 
@@ -50,10 +43,8 @@ function Nav() {
         setHot(titlePart === 'hot');
         setHistory(titlePart === 'lichsu');
         setTimkiem(titlePart === 'chonloc');
-    }, []); // Bỏ trống dependency array để chỉ gọi useEffect khi component mount
+    }, [currentUrl]);
 
-    // ẩn hiện div
-    // const [showRank, setShowRank] = useState(false);
     const [showCategory, setShowCategory] = useState(false);
 
     const handleMouseEnterCategory = () => {
@@ -68,20 +59,20 @@ function Nav() {
         <div className={cx('container1')}>
             <div className={cx('nav')}>
                 <nav className={cx('navbar')}>
-                    <a href="/">
+                    <Link to="/">
                         <li className={cx({ 'onclick-btn': ishome, nav_li: !ishome }, 'home')}>
                             <FontAwesomeIcon icon={faHouse} />
                         </li>
-                    </a>
-                    <a href="/hot">
+                    </Link>
+                    <Link to="/hot">
                         <li className={cx({ 'onclick-btn': ishot, nav_li: !ishot })}>HOT</li>
-                    </a>
-                    <a href="/theodoi">
+                    </Link>
+                    <Link to="/theodoi">
                         <li className={cx({ 'onclick-btn': isTheodoi, nav_li: !isTheodoi })}>THEO DÕI</li>
-                    </a>
-                    <a href="/lichsu">
+                    </Link>
+                    <Link to="/lichsu">
                         <li className={cx({ 'onclick-btn': ishistory, nav_li: !ishistory })}>LỊCH SỬ</li>
-                    </a>
+                    </Link>
                     <li
                         className={cx('nav_li', 'category-li')}
                         onMouseEnter={handleMouseEnterCategory}
@@ -92,9 +83,9 @@ function Nav() {
                             <div className={cx('div-category')}>
                                 <nav className={cx('nav1')}>
                                     {allGenres.map((genre, index) => (
-                                        <a href={`/${genre}`} key={index}>
+                                        <Link to={`/${genre}`} key={index}>
                                             <li className={cx('list')}>{genre}</li>
-                                        </a>
+                                        </Link>
                                     ))}
                                 </nav>
                             </div>
@@ -123,9 +114,9 @@ function Nav() {
                         )}
                     </li> */}
 
-                    <a href="/chonloc">
+                    <Link to="/chonloc">
                         <li className={cx({ 'onclick-btn': istimkiem, nav_li: !istimkiem })}>TÌM TRUYỆN</li>
-                    </a>
+                    </Link>
                     {/* <li className={cx('girl', 'nav_li')}>
                             <a href="/">CON GÁI</a>
                         </li>

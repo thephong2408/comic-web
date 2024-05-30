@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import classNames from 'classnames/bind';
 import styles from './Signin.module.scss';
+import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faXmark } from '@fortawesome/free-solid-svg-icons';
 import { faDiscord, faFacebook, faGoogle, faTwitter } from '@fortawesome/free-brands-svg-icons';
@@ -46,11 +47,11 @@ function Signon() {
         <div className={cx('wrapper')}>
             {/* Đăng kí */}
             <div className={cx('sign-on')}>
-                <a href="/">
+                <Link to="/">
                     <button className={cx('return')}>
                         <FontAwesomeIcon icon={faXmark} />
                     </button>
-                </a>
+                </Link>
                 <form onSubmit={handleSignUp}>
                     <h2>Đăng Nhập</h2>
 

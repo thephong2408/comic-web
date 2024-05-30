@@ -15,21 +15,22 @@ import {
     faChevronUp,
 } from '@fortawesome/free-solid-svg-icons';
 import { API } from '~/API';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 const cx = classNames.bind(styles);
 
 function ComicBookCover() {
     const [posts, setPosts] = useState([]);
+    const location = useLocation(); // Hook to get current location
+    const currentUrl = location.pathname; // Get the current URL
 
     useEffect(() => {
-        const currentUrl = window.location.href;
-        const parts = currentUrl.split('/comicbookcover/'); // Tách chuỗi bằng '/comicbookcover/'
-        const titlePart = parts.pop(); // Lấy phần tử cuối cùng trong mảng parts, chính là tiêu đề
+        const parts = currentUrl.split('/comicbookcover/'); // Split the URL by '/comicbookcover/'
+        const titlePart = parts.pop(); // Get the last part of the array, which is the title
         const title = decodeURIComponent(titlePart);
         const filteredPosts = API.filter((post) => post.name === title);
         setPosts(filteredPosts);
-    }, []);
+    }, [currentUrl]); // Dependency array with currentUrl ensures it runs when URL changes
 
     const [monitor, setMonitor] = useState(true);
     const handleMonior = () => {
@@ -49,16 +50,16 @@ function ComicBookCover() {
     const arr = [1, 2, 3, 4, 5];
     const [selectedStars, setSelectedStars] = useState([]);
 
-    // Kiểm tra xem ngôi sao mới được chọn có nằm ngay sau ngôi sao cuối cùng đã được chọn hay không
+    // Check if the newly selected star is right after the last selected star
     const handleStarClick = (index) => {
-        // Nếu người dùng chọn ngôi sao đầu tiên (ngôi sao 1), hoặc ngôi sao mới được chọn là ngôi sao tiếp theo của ngôi sao cuối cùng đã được chọn
+        // If the user selects the first star or the new star is the next star of the last selected star
         if (index === 1 || selectedStars.includes(index - 1)) {
             const selectedIndex = selectedStars.indexOf(index);
             if (selectedIndex === -1) {
-                // Nếu ngôi sao chưa được chọn, thêm nó vào mảng
+                // If the star is not yet selected, add it to the array
                 setSelectedStars([...selectedStars, index]);
             } else {
-                // Nếu ngôi sao đã được chọn, xóa nó khỏi mảng
+                // If the star is already selected, remove it from the array
                 const newSelectedStars = selectedStars.slice(0, selectedIndex);
                 setSelectedStars(newSelectedStars);
             }

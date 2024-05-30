@@ -2,22 +2,23 @@ import React from 'react';
 import styles from './SearchResults.module.scss';
 import { useState, useEffect } from 'react';
 import classNames from 'classnames/bind';
-import { Link } from 'react-router-dom';
+
 import ButtonTop from '~/Button/ButtonTop';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye, faComment, faHeart } from '@fortawesome/free-solid-svg-icons';
 import { API } from '~/API';
-
+import { Link, useLocation } from 'react-router-dom';
 const cx = classNames.bind(styles);
 
 function SearchResult() {
     const [searchResults, setSearchResults] = useState([]);
-    const currentUrl = window.location.href;
+    const location = useLocation(); // Hook để lấy location hiện tại
+    const currentUrl = location.pathname; // Lấy URL hiện tại
+
     const parts = currentUrl.split('/');
 
     const lastPart = parts[parts.length - 1];
     useEffect(() => {
-        const currentUrl = window.location.href;
         const parts = currentUrl.split('/');
 
         const lastPart = parts[parts.length - 1];

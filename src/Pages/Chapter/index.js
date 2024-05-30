@@ -85,7 +85,7 @@ function Chapter() {
                     <nav className={cx('nav-title')}>
                         <ul className={cx('nav-title-ul')}>
                             <li className={cx('nav-title-li1', 'nav-title-li-home')}>
-                                <a href="/">Trang chủ</a>
+                                <Link to="/">Trang chủ</Link>
                             </li>
                             <li className={cx('nav-title-li1')}>
                                 <FontAwesomeIcon icon={faAnglesRight} />
@@ -102,9 +102,9 @@ function Chapter() {
                     </nav>
                     <ul className={cx({ ultoolbar: isVisible }, { 'chap-ul': !isVisible })}>
                         <li className={cx('li-home', 'li-chap')}>
-                            <a href="/">
+                            <Link to="/">
                                 <FontAwesomeIcon icon={faHouse} />
-                            </a>
+                            </Link>
                         </li>
                         <li className={cx('li-chap')}>
                             <Link to={`/comicbookcover/${post.name}/${chapbtoot}`}>
@@ -122,11 +122,14 @@ function Chapter() {
                                 <div className={cx('div-chapter')}>
                                     <ul className={cx('ul-chapters')}>
                                         {post.sochuong.map((chapter) => (
-                                            <a href={`/comicbookcover/${post.name}/${chapter.chap}`} key={chapter.chap}>
+                                            <Link
+                                                to={`/comicbookcover/${post.name}/${chapter.chap}`}
+                                                key={chapter.chap}
+                                            >
                                                 <li key={index} className={cx('li-chapters')}>
                                                     <span> chap {chapter.chap}</span>
                                                 </li>
-                                            </a>
+                                            </Link>
                                         ))}
                                     </ul>
                                 </div>

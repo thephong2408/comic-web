@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/:https://thephong2408.github.io/comic-web/static/css/main.165389aa.css",
+    "main.js": "/:https://thephong2408.github.io/comic-web/static/js/main.e052b20a.js",
+    "static/js/453.46cdda66.chunk.js": "/:https://thephong2408.github.io/comic-web/static/js/453.46cdda66.chunk.js",
+    "index.html": "/:https://thephong2408.github.io/comic-web/index.html",
+    "main.165389aa.css.map": "/:https://thephong2408.github.io/comic-web/static/css/main.165389aa.css.map",
+    "main.e052b20a.js.map": "/:https://thephong2408.github.io/comic-web/static/js/main.e052b20a.js.map",
+    "453.46cdda66.chunk.js.map": "/:https://thephong2408.github.io/comic-web/static/js/453.46cdda66.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.165389aa.css",
+    "static/js/main.e052b20a.js"
+  ]
+}

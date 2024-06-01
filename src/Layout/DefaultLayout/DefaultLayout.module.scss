@@ -136,7 +136,6 @@
     align-items: center;
     & button {
         padding: 1rem;
-        font-size: var(--m);
         color: var(--text-color-white);
         background-color: var(--background-boder-color-warning);
         margin-right: 1rem;
@@ -163,6 +162,9 @@
     .content {
         width: 100%;
     }
+    .warning {
+        font-size: var(--m);
+    }
 }
 @media (min-width: 576px) and (max-width: 767.98px) {
     .div-container {
@@ -177,6 +179,9 @@
     }
     .content {
         width: 100%;
+    }
+    .warning {
+        font-size: var(--m);
     }
 }
 

@@ -28,6 +28,7 @@ nav.navbar {
     border: none;
 
     .nav_li {
+        display: none;
         width: 12rem;
         padding: 1rem;
         height: 4.5rem;
@@ -126,4 +127,39 @@ nav.navbar {
         height: 100%;
         width: 5rem;
     }
+}
+
+/* Screen width < 576px: Hide timtruyen */
+@media (max-width: 575.98px) {
+    .timtruyen {
+        display: none;
+    }
+    .container1 {
+        display: none;
+    }
+}
+
+/* Screen width >= 576px and < 768px: Hide timtruyen */
+@media (max-width: 576px) {
+    .container1 {
+        display: none;
+    }
+}
+@media (min-width: 576px) and (max-width: 767.98px) {
+}
+
+/* Screen width >= 768px and < 992px: Hide timtruyen */
+@media (min-width: 768px) and (max-width: 991.98px) {
+}
+
+/* Screen width >= 992px and < 1200px: You can define other styles here if needed */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+}
+
+/* Screen width >= 1200px and < 1400px: You can define other styles here if needed */
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+}
+
+/* Screen width >= 1400px: You can define other styles here if needed */
+@media (min-width: 1400px) {
 }

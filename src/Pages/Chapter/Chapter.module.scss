@@ -2,7 +2,6 @@
     font-size: var(--m);
 
     flex-direction: column;
-    margin-inline: 20rem;
 
     .nav-title {
         background: linear-gradient(to right bottom, #57e72c, #faff60);
@@ -164,15 +163,3 @@
     align-items: center;
 }
 // tích hợp màn hình
-@media only screen and (max-width: 1400px) {
-    .wrapper {
-        margin-inline: 2rem;
-    }
-}
-@media only screen and (max-width: 1200px) {
-}
-@media only screen and (max-width: 1000px) {
-    .wrapper {
-        margin-inline: 2rem;
-    }
-}

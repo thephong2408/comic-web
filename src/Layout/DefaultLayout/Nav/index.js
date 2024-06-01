@@ -55,6 +55,26 @@ function Nav() {
         setShowCategory(false);
     };
 
+    // kích thước màn hình
+    const [isDesktop, setIsDesktop] = useState(true);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setIsDesktop(window.innerWidth >= 789);
+        };
+
+        // Kiểm tra kích thước màn hình khi component được mount
+        handleResize();
+
+        // Thêm event listener để theo dõi kích thước màn hình
+        window.addEventListener('resize', handleResize);
+
+        // Cleanup event listener khi component unmount
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
+
     return (
         <div className={cx('container1')}>
             <div className={cx('nav')}>
@@ -65,32 +85,39 @@ function Nav() {
                         </li>
                     </Link>
                     <Link to="/hot">
-                        <li className={cx({ 'onclick-btn': ishot, nav_li: !ishot })}>HOT</li>
+                        <li id="hot" className={cx({ 'onclick-btn': ishot, nav_li: !ishot })}>
+                            HOT
+                        </li>
                     </Link>
                     <Link to="/theodoi">
-                        <li className={cx({ 'onclick-btn': isTheodoi, nav_li: !isTheodoi })}>THEO DÕI</li>
+                        <li id="theodoi" className={cx({ 'onclick-btn': isTheodoi, nav_li: !isTheodoi })}>
+                            THEO DÕI
+                        </li>
                     </Link>
                     <Link to="/lichsu">
                         <li className={cx({ 'onclick-btn': ishistory, nav_li: !ishistory })}>LỊCH SỬ</li>
                     </Link>
-                    <li
-                        className={cx('nav_li', 'category-li')}
-                        onMouseEnter={handleMouseEnterCategory}
-                        onMouseLeave={handleMouseLeaveCategory}
-                    >
-                        THỂ LOẠI
-                        {showCategory && (
-                            <div className={cx('div-category')}>
-                                <nav className={cx('nav1')}>
-                                    {allGenres.map((genre, index) => (
-                                        <Link to={`/${genre}`} key={index}>
-                                            <li className={cx('list')}>{genre}</li>
-                                        </Link>
-                                    ))}
-                                </nav>
-                            </div>
-                        )}
-                    </li>
+                    {isDesktop && (
+                        <li
+                            id="theloai"
+                            className={cx('nav_li', 'category-li', 'theloai')}
+                            onMouseEnter={handleMouseEnterCategory}
+                            onMouseLeave={handleMouseLeaveCategory}
+                        >
+                            THỂ LOẠI
+                            {showCategory && (
+                                <div className={cx('div-category')}>
+                                    <nav className={cx('nav1')}>
+                                        {allGenres.map((genre, index) => (
+                                            <Link to={`/${genre}`} key={index}>
+                                                <li className={cx('list')}>{genre}</li>
+                                            </Link>
+                                        ))}
+                                    </nav>
+                                </div>
+                            )}
+                        </li>
+                    )}
                     {/* <li
                         className={cx('nav_li', 'category-li', 'rank-li')}
                         onMouseEnter={handleMouseEnterRank}
@@ -113,10 +140,16 @@ function Nav() {
                             </div>
                         )}
                     </li> */}
-
-                    <Link to="/chonloc">
-                        <li className={cx({ 'onclick-btn': istimkiem, nav_li: !istimkiem })}>TÌM TRUYỆN</li>
-                    </Link>
+                    {isDesktop && (
+                        <Link to="/chonloc">
+                            <li
+                                id="timtruyen"
+                                className={cx({ 'onclick-btn': istimkiem, nav_li: !istimkiem }, 'timtruyen')}
+                            >
+                                TÌM TRUYỆN
+                            </li>
+                        </Link>
+                    )}
                     {/* <li className={cx('girl', 'nav_li')}>
                             <a href="/">CON GÁI</a>
                         </li>

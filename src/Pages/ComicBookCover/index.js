@@ -84,7 +84,9 @@ function ComicBookCover() {
                         </li>
                     </ul>
                     <div className={cx('wrapper1')}>
-                        <img className={cx('avt')} src={post.url} alt="truyện" />
+                        <div className={cx('div-avt')}>
+                            <img className={cx('avt')} src={post.url} alt="truyện" />
+                        </div>
                         <div className={cx('wrapper2')}>
                             <h3 className={cx('name')}>{post.name}</h3>
                             <span className={cx('time')}> Cập nhập thời gian</span>

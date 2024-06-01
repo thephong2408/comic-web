@@ -46,11 +46,13 @@ li {
     margin-top: 5rem;
     display: flex;
     justify-content: flex-start;
-    .avt {
-        width: 30rem;
-        margin-right: 5rem;
-        object-fit: cover;
-        height: 100%;
+    .div-avt {
+        .avt {
+            width: 30rem;
+            margin-right: 5rem;
+            object-fit: cover;
+            height: 100%;
+        }
     }
     .wrapper2 {
         position: relative;
@@ -185,6 +187,7 @@ li {
 .wrapper4 {
     background-color: rgb(224, 218, 218);
     border: 1px solid #d9d5d5;
+    height: 20rem;
     overflow: auto;
 }
 .div-list {
@@ -222,4 +225,71 @@ li {
 .comment {
     width: 100%;
     margin-top: 5rem;
+}
+
+/* Screen width >= 576px and < 768px: 3 slides per view */
+@media (max-width: 576px) {
+    .ul-information-theloai {
+        display: none;
+    }
+}
+@media (max-width: 767.98px) {
+    .wrapper1 {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+    }
+    .wrapper2 {
+        margin-top: 2rem;
+    }
+    .nav-btn {
+        position: relative;
+        flex-direction: column;
+        bottom: 0;
+        .nav-btn-ul {
+            display: flex;
+            margin-top: 2rem;
+            .nav-btn-li {
+                margin-right: 2rem;
+            }
+            .nav-text {
+                font-size: var(--m);
+            }
+        }
+    }
+    .div-avt {
+        width: 100%;
+        display: flex;
+        margin-left: 2.5rem;
+        justify-content: center;
+        .avt {
+            width: 100%;
+            margin-right: 0;
+            object-fit: cover;
+            height: 100%;
+        }
+    }
+    .ul-first-part {
+        font-size: var(--m);
+    }
+    .name {
+        font-size: var(--m);
+        text-align: center;
+    }
+}
+
+/* Screen width >= 768px and < 992px: 3 slides per view */
+@media (max-width: 991.98px) {
+}
+
+/* Screen width >= 992px and < 1200px: 4 slides per view */
+@media (max-width: 1199.98px) {
+}
+
+/* Screen width >= 1200px and < 1400px: 5 slides per view */
+@media (max-width: 1399.98px) {
+}
+
+/* Screen width >= 1400px: 6 slides per view */
+@media (min-width: 1400px) {
 }

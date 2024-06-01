@@ -69,7 +69,45 @@
         margin-right: 0.5rem;
     }
 }
-@media only screen and (max-width: 1400px) {
+@media (max-width: 576px) {
+    .title {
+        font-weight: 600;
+        font-size: var(--n);
+
+        & span {
+            font-size: var(--m);
+        }
+    }
+    .name {
+        font-size: var(--m);
+    }
+    .times {
+        font-size: var(--ms);
+    }
+}
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .title {
+        font-weight: 600;
+        font-size: var(--n);
+
+        & span {
+            font-size: var(--m);
+        }
+    }
+    .name {
+        font-size: var(--m);
+    }
+    .times {
+        font-size: var(--ms);
+    }
+}
+
+/* Screen width >= 768px and < 992px: 3 slides per view */
+@media (min-width: 768px) and (max-width: 991.98px) {
+}
+
+/* Screen width >= 992px and < 1200px: 4 slides per view */
+@media (min-width: 992px) and (max-width: 1199.98px) {
     .title {
         font-weight: 600;
         font-size: var(--l);
@@ -81,7 +119,43 @@
     .name {
         font-size: var(--n);
     }
-    .chap {
+    .times {
+        font-size: var(--ns);
+    }
+}
+
+/* Screen width >= 1200px and < 1400px: 5 slides per view */
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+    .title {
+        font-weight: 600;
+        font-size: var(--l);
+
+        & span {
+            font-size: var(--n);
+        }
+    }
+    .name {
+        font-size: var(--n);
+    }
+    .times {
+        font-size: var(--ns);
+    }
+}
+
+/* Screen width >= 1400px: 6 slides per view */
+@media (min-width: 1400px) {
+    .title {
+        font-weight: 600;
+        font-size: var(--l);
+
+        & span {
+            font-size: var(--n);
+        }
+    }
+    .name {
+        font-size: var(--n);
+    }
+    .times {
         font-size: var(--ns);
     }
 }

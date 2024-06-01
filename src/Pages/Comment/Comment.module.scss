@@ -4,7 +4,6 @@
     height: auto;
     display: flex;
     background: linear-gradient(45deg, #a742f5, #42aaf5);
-
     padding: 4rem;
 }
 .title {
@@ -157,6 +156,37 @@
     }
     .thongtin {
         padding-left: 0;
+    }
+    .thongtin {
+        display: flex;
+        flex-direction: column;
+        font-size: var(--ms);
+        color: var(--text-color-white);
+        .comment {
+            width: 100%;
+        }
+        gap: 15px;
+        padding-left: 3rem;
+        font-weight: 600;
+
+        .link-icon {
+            display: flex;
+            .icon-icon {
+                color: #42aaf5;
+                margin-right: 1rem;
+                font-size: 1.5rem;
+                box-shadow: 1px 1px 13px 1px #fff;
+                padding: 1rem;
+                background-color: var(--background-color--white);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            :hover {
+                background-color: #42aaf5;
+                color: var(--text-color-white);
+            }
+        }
     }
 }
 @media (min-width: 576px) and (max-width: 767.98px) {

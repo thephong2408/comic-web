@@ -19,7 +19,7 @@
 .sign-on {
     z-index: 2;
     height: auto;
-    min-width: 60rem;
+    // width: 60rem;
     padding: 2rem;
     background-color: rgba(167, 155, 155, 0.1);
     box-shadow: 1px 1px 13px 1px #b26ace;
@@ -43,7 +43,7 @@
     width: 100%;
     height: 5rem;
     font-size: var(--m);
-    color: var(--text-color-dark);
+    color: #181818;
     padding-top: 2rem;
     background-color: aliceblue;
     margin-bottom: 3rem;
@@ -78,7 +78,6 @@ input {
     font-size: var(--ms);
     position: relative;
     bottom: 2rem;
-
     padding-left: 0rem;
     color: rgb(255, 38, 0);
 }
@@ -89,15 +88,14 @@ input {
 
 // xác nhận đăng kí
 .div-button {
-    margin-top: 2rem;
     & .button {
         color: var(--text-color-white);
         background-color: rgb(227, 12, 12);
         padding: 1.5rem;
-
-        margin-top: 0.5rem;
+        margin-top: 1rem;
         font-size: var(--m);
         border-radius: 4px;
+        cursor: pointer;
     }
     & .showPasswordButton {
         color: white;
@@ -118,6 +116,7 @@ input {
 }
 
 .div-other-links {
+    padding: 2rem;
     text-align: center;
 }
 .link-icon {
@@ -127,8 +126,9 @@ input {
 .icon-icon {
     padding: 1rem;
     margin: 1rem;
-    border: 2px solid white;
-    box-shadow: 1px 1px 13px 1px #8d2bb0;
+    // border: 2px solid white;
+    box-shadow: 1px 1px 13px 1px #b26ace;
+
     &:hover {
         background-color: white;
         color: #181818;
@@ -138,4 +138,20 @@ input {
 }
 .div-other-title {
     padding: 2rem;
+}
+@media (max-width: 1000px) {
+    .sign-on {
+        width: 100%;
+    }
+    .wrapper {
+        padding: 5rem;
+    }
+}
+@media (max-width: 568px) {
+    .sign-on {
+        width: 100%;
+    }
+    .wrapper {
+        padding: 1rem;
+    }
 }

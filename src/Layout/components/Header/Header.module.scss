@@ -4,6 +4,7 @@
     display: flex;
     align-items: center;
     height: 100%;
+    justify-content: center;
 }
 .wapper {
     height: 5rem;
@@ -217,6 +218,7 @@
 
 @media only screen and (max-width: 700px) {
     .timkiem {
-        display: none;
+        position: relative;
+        right: 1rem;
     }
 }

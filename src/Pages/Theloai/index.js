@@ -14,12 +14,11 @@ function Theloai() {
     const [title, setTitle] = useState('');
     const location = useLocation();
 
+    const url = location.pathname;
+    const parts = url.split('/');
+    const newTitlePart = parts.pop();
+    const newTitle = decodeURIComponent(newTitlePart);
     useEffect(() => {
-        const url = location.pathname;
-        const parts = url.split('/');
-        const newTitlePart = parts.pop();
-        const newTitle = decodeURIComponent(newTitlePart);
-
         // Lấy ra danh sách các bài viết có thể loại tương ứng với title
         const filteredPosts = API.filter((post) => post.theloai.includes(newTitle));
         setPosts(filteredPosts);

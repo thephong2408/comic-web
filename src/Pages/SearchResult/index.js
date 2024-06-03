@@ -14,14 +14,9 @@ function SearchResult() {
     const [searchResults, setSearchResults] = useState([]);
     const location = useLocation(); // Hook để lấy location hiện tại
     const currentUrl = location.pathname; // Lấy URL hiện tại
-
     const parts = currentUrl.split('/');
-
     const lastPart = parts[parts.length - 1];
     useEffect(() => {
-        const parts = currentUrl.split('/');
-
-        const lastPart = parts[parts.length - 1];
         const filteredResults = API.filter((item) => {
             return item.name.toLowerCase().includes(lastPart);
         });

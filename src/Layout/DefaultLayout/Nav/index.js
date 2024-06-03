@@ -34,10 +34,9 @@ function Nav() {
     // Sử dụng useEffect để theo dõi thay đổi của URL
     const location = useLocation(); // Hook to get current location
     const currentUrl = location.pathname; // Get the current URL
+    const parts = currentUrl.split('/');
+    const titlePart = parts.pop();
     useEffect(() => {
-        const parts = currentUrl.split('/');
-        const titlePart = parts.pop();
-
         setIsHome(titlePart === '');
         setIsTheodoi(titlePart === 'theodoi');
         setHot(titlePart === 'hot');

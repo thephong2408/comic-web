@@ -58,10 +58,9 @@ function Header() {
     const [ismenu, setIsMenu] = useState(true);
     const location = useLocation(); // Hook to get current location
     const currentUrl = location.pathname; // Get the current URL
+    const parts = currentUrl.split('/');
+    const titlePart = parts.pop();
     useEffect(() => {
-        const parts = currentUrl.split('/');
-        const titlePart = parts.pop();
-
         setIsMenu(titlePart === 'menu');
     }, []);
 

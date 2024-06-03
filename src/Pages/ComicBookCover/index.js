@@ -23,11 +23,11 @@ function ComicBookCover() {
     const [posts, setPosts] = useState([]);
     const location = useLocation(); // Hook to get current location
     const currentUrl = location.pathname; // Get the current URL
+    const parts = currentUrl.split('/comicbookcover/'); // Split the URL by '/comicbookcover/'
+    const titlePart = parts.pop(); // Get the last part of the array, which is the title
+    const title = decodeURIComponent(titlePart);
 
     useEffect(() => {
-        const parts = currentUrl.split('/comicbookcover/'); // Split the URL by '/comicbookcover/'
-        const titlePart = parts.pop(); // Get the last part of the array, which is the title
-        const title = decodeURIComponent(titlePart);
         const filteredPosts = API.filter((post) => post.name === title);
         setPosts(filteredPosts);
     }, [currentUrl]); // Dependency array with currentUrl ensures it runs when URL changes

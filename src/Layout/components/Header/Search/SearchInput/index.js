@@ -5,12 +5,13 @@ import classNames from 'classnames/bind';
 import Item from '../Item';
 import styles from './SearchInput.module.scss';
 import { API } from '~/API';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import SearchResult from '~/Pages/SearchResult';
 
 const cx = classNames.bind(styles);
 
 function SearchInput() {
+    const url = useLocation();
     const [searchResults, setSearchResults] = useState([]);
     const [searchValue, setSearchValue] = useState('');
     const [isLoading, setIsLoading] = useState(false);
@@ -18,7 +19,6 @@ function SearchInput() {
     const handleInputChange = (event) => {
         setSearchValue(event.target.value);
         setIsLoading(true);
-
         setTimeout(() => {
             setIsLoading(false);
         }, 500);
@@ -33,6 +33,7 @@ function SearchInput() {
         });
         setSearchResults(filteredResults);
     }, [searchValue]);
+    const to = searchValue.length > 0 ? `/searchresult/${searchValue}` : url;
 
     return (
         <>
@@ -59,7 +60,7 @@ function SearchInput() {
                 )}
 
                 <button className={cx('search-btn')}>
-                    <Link to={`/searchresult/${searchValue}`}>
+                    <Link to={to}>
                         <FontAwesomeIcon
                             onClick={handleDelete}
                             className={cx('search-btn-btn')}

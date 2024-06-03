@@ -30,7 +30,7 @@ function TableFlollow() {
                 <h2 className={cx('title')}>
                     Truyện đang theo dõi
                     <span>
-                        <a href={'/theodoi'}>xem tất cả</a>
+                        <Link to={'/theodoi'}>xem tất cả</Link>
                     </span>
                 </h2>
 

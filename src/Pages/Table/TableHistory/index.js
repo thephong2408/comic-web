@@ -20,7 +20,7 @@ function TableHistory() {
                 <h2 className={cx('title')}>
                     Lịch Sử Đọc Truyện
                     <span>
-                        <a href={'/lichsu'}>xem tất cả</a>
+                        <Link to={'/lichsu'}>xem tất cả</Link>
                     </span>
                 </h2>
 
@@ -29,24 +29,24 @@ function TableHistory() {
                         {posts
                             .filter((post) => post.lichsu.some((item) => item.xem === 'yes'))
                             .map((post, index) => (
-                                <li key={index}>
-                                    <Link to={`/comicbookcover/${post.name}`}>
+                                <Link to={`/comicbookcover/${post.name}`}>
+                                    <li key={index}>
                                         <img className={cx('img')} alt="ảnh" src={post.url} />
-                                    </Link>
-                                    <div className={cx('container')}>
-                                        <a href="/">
-                                            <span className={cx('name')}>{post.name}</span>
-                                        </a>
-                                        <p>
-                                            <span className={cx('chap')}>
-                                                <span> chap</span>
-                                                {post.lichsu.some((item) => item.chap)
-                                                    ? post.lichsu.find((item) => item.chap).chap
-                                                    : null}
-                                            </span>
-                                        </p>
-                                    </div>
-                                </li>
+                                        <div className={cx('container')}>
+                                            <Link to="/">
+                                                <span className={cx('name')}>{post.name}</span>
+                                            </Link>
+                                            <p>
+                                                <span className={cx('chap')}>
+                                                    <span> chap</span>
+                                                    {post.lichsu.some((item) => item.chap)
+                                                        ? post.lichsu.find((item) => item.chap).chap
+                                                        : null}
+                                                </span>
+                                            </p>
+                                        </div>
+                                    </li>
+                                </Link>
                             ))}
                     </ul>
                 </div>

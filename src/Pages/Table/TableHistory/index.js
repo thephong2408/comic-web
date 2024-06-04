@@ -29,7 +29,7 @@ function TableHistory() {
                         {posts
                             .filter((post) => post.lichsu.some((item) => item.xem === 'yes'))
                             .map((post, index) => (
-                                <Link to={`/comicbookcover/${post.name}`}>
+                                <Link key={index} to={`/comicbookcover/${post.name}`}>
                                     <li key={index}>
                                         <img className={cx('img')} alt="ảnh" src={post.url} />
                                         <div className={cx('container')}>

@@ -30,8 +30,8 @@ function TableRank() {
                             .sort((a, b) => b.luotxem - a.luotxem)
                             .slice(0, 5) // Sắp xếp theo số lượt xem giảm dần
                             .map((post, index) => (
-                                <Link to={`/comicbookcover/${post.name}`}>
-                                    <li key={index}>
+                                <Link key={index} to={`/comicbookcover/${post.name}`}>
+                                    <li>
                                         <div className={cx('rank')}>
                                             <span className={cx('icon-rank')}>{index + 1}</span>{' '}
                                             {/* Số thứ tự, bắt đầu từ 1 */}

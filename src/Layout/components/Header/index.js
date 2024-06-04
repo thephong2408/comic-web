@@ -61,7 +61,11 @@ function Header() {
     const parts = currentUrl.split('/');
     const titlePart = parts.pop();
     useEffect(() => {
-        setIsMenu(titlePart === 'menu');
+        if (titlePart === 'menu') {
+            setIsMenu(true);
+        } else {
+            setIsMenu(false);
+        }
     }, []);
 
     return (

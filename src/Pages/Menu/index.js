@@ -2,6 +2,7 @@ import classNames from 'classnames/bind';
 import styles from './Upload.module.scss';
 import { Link } from 'react-router-dom';
 import Table from 'react-bootstrap/Table';
+import SearchInput from '~/Layout/components/Header/Search/SearchInput';
 import { useState, useEffect } from 'react';
 
 import { API } from '~/API';
@@ -21,6 +22,10 @@ function Upload() {
     return (
         <div className={cx('wrapper1')}>
             <div className={cx('wrapper')}>
+                <div className={cx('search')}>
+                    <SearchInput />
+                </div>
+
                 <nav>
                     <ul>
                         <li className={cx('li-li')}>

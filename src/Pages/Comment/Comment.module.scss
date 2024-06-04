@@ -147,6 +147,53 @@
 }
 
 @media (max-width: 576px) {
+    .title {
+        font-size: var(--m);
+        margin-bottom: 5rem;
+        color: var(--text-color-white);
+    }
+    .container-commnet {
+        .comment-ul {
+            display: block;
+
+            & .comment-li {
+                position: relative;
+                display: flex;
+                min-width: 25rem;
+                padding-block: 2rem;
+                font-size: var(--ms);
+                & .avt {
+                    margin-right: 2rem;
+                    position: absolute;
+                    top: 2.5rem;
+                    padding: 1rem;
+                    font-size: var(--l);
+                    border-radius: 99999px;
+                    background-color: #84e852;
+                    box-shadow: 1px 1px 13px 1px #bf0aec;
+                }
+                & .comment-comment {
+                    flex: 1;
+                    margin-left: 6rem;
+                    padding: 1rem;
+                    border-radius: 12px;
+                    background-color: var(--text-color-white);
+                    & .comment-name {
+                        font-weight: 400;
+                        margin-bottom: 0.8rem;
+                        font-size: var(--m);
+                    }
+                    & .comment-li1 {
+                    }
+                    & .comment-span {
+                        width: 100%;
+                        font-size: var(--mss);
+                        color: var(--text-color-dark);
+                    }
+                }
+            }
+        }
+    }
     .wrapper {
         display: flex;
         flex-direction: column;
@@ -154,9 +201,7 @@
     .comment {
         width: 100%;
     }
-    .thongtin {
-        padding-left: 0;
-    }
+
     .thongtin {
         display: flex;
         flex-direction: column;
@@ -166,7 +211,7 @@
             width: 100%;
         }
         gap: 15px;
-        padding-left: 3rem;
+        padding-left: 0rem;
         font-weight: 600;
 
         .link-icon {

@@ -51,7 +51,6 @@
     padding: 1rem;
     border-radius: 5px;
     margin: 1rem;
-
     box-shadow: 1px 1px 13px 1px var(--color-white);
     color: var(--text-color-white);
     font-size: 1.8rem;
@@ -163,3 +162,137 @@
     align-items: center;
 }
 // tích hợp màn hình
+@media (max-width: 576px) {
+    .wrapper {
+        font-size: var(--ms);
+
+        .nav-title {
+            .nav-title-ul {
+                display: flex;
+                height: 4rem;
+                align-items: center;
+                .nav-title-li1 {
+                    font-size: var(--m);
+                    font-weight: 600;
+                }
+
+                .nav-title-li2 {
+                    padding-top: 0.5rem;
+                    padding-inline: 0.5rem;
+                }
+            }
+        }
+    }
+
+    .li-btn {
+        padding: 1rem;
+        border-radius: 5px;
+        margin: 1rem;
+
+        box-shadow: 1px 1px 13px 1px var(--color-white);
+        color: var(--text-color-white);
+        font-size: var(--ms);
+        font-weight: 600;
+        min-width: 12rem;
+        height: 3.5rem;
+
+        cursor: pointer;
+    }
+    .following {
+        background-color: red;
+        color: white;
+    }
+    .li-chap {
+        font-size: var(--ms);
+        height: 3.5rem;
+        padding: 1rem;
+    }
+    .li-chapter {
+        z-index: 99999;
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem;
+        border-radius: 5px;
+        margin: 1rem;
+        font-size: var(--ms);
+        width: 30rem;
+
+        .div-chapter {
+            position: absolute;
+            top: 4.5rem;
+            left: 0;
+            color: var(--text-color-dark);
+            overflow: auto;
+            max-height: 30rem;
+            width: 100%;
+            border-radius: 0 0 3px 3px;
+            background-color: var(--background-color--white);
+            .ul-chapters {
+                width: 100%;
+
+                .li-chapters {
+                    border-bottom: 1px solid var(--color-white);
+                    margin-top: 0rem;
+                    padding-block: 1rem;
+                    cursor: pointer;
+                    &:hover {
+                        background: linear-gradient(to right, #a742f5, #42aaf5);
+                        color: var(--text-color-white);
+                    }
+                    span {
+                        padding: 1rem;
+                    }
+                }
+            }
+        }
+    }
+
+    //  ảnh
+    .container {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .div-img {
+            width: 100%;
+            padding: 0;
+            margin: 0;
+            height: auto;
+            img {
+                width: 100%;
+            }
+        }
+        //
+    }
+    .ultoolbar {
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 50%; /* Đặt left là 50% */
+        transform: translateX(-50%); /* Di chuyển về trái 50% của chiều rộng của chính nó */
+        z-index: 9999;
+        background-color: rgb(142, 152, 152);
+        height: 6rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+@media (min-width: 576px) and (max-width: 767.98px) {
+}
+
+/* Screen width >= 768px and < 992px: Hide timtruyen */
+@media (min-width: 768px) and (max-width: 991.98px) {
+}
+
+/* Screen width >= 992px and < 1200px: You can define other styles here if needed */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+}
+
+/* Screen width >= 1200px and < 1400px: You can define other styles here if needed */
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+}
+
+/* Screen width >= 1400px: You can define other styles here if needed */
+@media (min-width: 1400px) {
+}

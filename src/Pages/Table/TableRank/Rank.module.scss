@@ -132,17 +132,20 @@
 @media (max-width: 576px) {
     .title {
         font-weight: 600;
-        font-size: var(--n);
+        font-size: var(--m);
 
         & span {
-            font-size: var(--m);
+            font-size: var(--ms);
         }
     }
     .name {
-        font-size: var(--m);
+        font-size: var(--ms);
     }
     .times {
-        font-size: var(--ms);
+        font-size: var(--mss);
+    }
+    .chap {
+        font-size: var(--mss);
     }
     .rank {
         display: flex;
@@ -155,6 +158,21 @@
             text-shadow: 2px 2px 4px rgb(237, 104, 104);
             color: var(--text-color-red);
             font-weight: 600;
+        }
+    }
+    .container {
+        height: 6rem;
+    }
+    .board {
+        display: flex;
+        max-height: 40rem;
+        overflow-y: auto;
+        padding-right: 0.5rem;
+        & .img {
+            width: 4rem;
+            height: 6rem;
+            object-fit: fill;
+            margin-right: 1rem;
         }
     }
 }

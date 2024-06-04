@@ -28,7 +28,7 @@ function TableRank() {
                         {posts
                             // Lấy 10 bài đăng đầu tiên
                             .sort((a, b) => b.luotxem - a.luotxem)
-                            .slice(0, 10) // Sắp xếp theo số lượt xem giảm dần
+                            .slice(0, 5) // Sắp xếp theo số lượt xem giảm dần
                             .map((post, index) => (
                                 <Link to={`/comicbookcover/${post.name}`}>
                                     <li key={index}>
@@ -42,7 +42,8 @@ function TableRank() {
 
                                             {/* Tên bài đăng */}
                                             <p className={cx('p')}>
-                                                <span> chap {post.sochuong.length}</span> {/* Số chap */}
+                                                <span className={cx('chap')}> chap {post.sochuong.length}</span>{' '}
+                                                {/* Số chap */}
                                                 <span className={cx('times')}>
                                                     <FontAwesomeIcon icon={faEye} /> {post.luotxem} {/* Số lượt xem */}
                                                 </span>

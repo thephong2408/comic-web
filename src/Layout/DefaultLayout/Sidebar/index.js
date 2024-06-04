@@ -29,7 +29,7 @@ function Sidebar() {
     }, [posts]); // Cập nhật khi đường dẫn thay đổi
 
     return (
-        <div className={cx('wapper')}>
+        <div className={cx('wrapper')}>
             <h3>{title}</h3>
             <Card />
         </div>

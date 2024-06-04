@@ -72,10 +72,10 @@
 @media (max-width: 576px) {
     .title {
         font-weight: 600;
-        font-size: var(--n);
+        font-size: var(--m);
 
         & span {
-            font-size: var(--m);
+            font-size: var(--ms);
         }
     }
     .name {

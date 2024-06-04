@@ -1,6 +1,5 @@
 .wrapper {
     padding-inline: 12rem;
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -10,9 +9,9 @@
     color: var(--text-color-white);
     font-size: var(--l);
     background-color: rgba(0, 0, 0, 1);
-    & h2 {
-        padding-bottom: 2rem;
-    }
+}
+h2 {
+    padding-bottom: 2rem;
 }
 
 //dăng kí
@@ -153,5 +152,18 @@ input {
     }
     .wrapper {
         padding: 1rem;
+    }
+    h2 {
+        font-size: var(--m);
+    }
+    .input {
+        padding: 0.6rem;
+        font-size: var(--ms);
+    }
+    .div-other-title {
+        font-size: var(--n);
+    }
+    .dangnhap {
+        margin-top: 1rem;
     }
 }

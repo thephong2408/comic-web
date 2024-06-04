@@ -154,4 +154,17 @@ input {
     .wrapper {
         padding: 1rem;
     }
+    h2 {
+        font-size: var(--m);
+    }
+    .input {
+        padding: 0.6rem;
+        font-size: var(--ms);
+    }
+    .div-other-title {
+        font-size: var(--n);
+    }
+    .dangki {
+        margin-top: 1rem;
+    }
 }

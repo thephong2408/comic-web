@@ -85,13 +85,6 @@ function Chapter() {
                     <nav className={cx('nav-title')}>
                         <ul className={cx('nav-title-ul')}>
                             <li className={cx('nav-title-li1', 'nav-title-li-home')}>
-                                <Link to="/">Trang chủ</Link>
-                            </li>
-                            <li className={cx('nav-title-li1')}>
-                                <FontAwesomeIcon icon={faAnglesRight} />
-                            </li>
-
-                            <li className={cx('nav-title-li1', 'nav-title-li-home')}>
                                 <Link to={`/comicbookcover/${post.name}`}>{post.name}</Link>
                             </li>
                         </ul>

@@ -77,7 +77,7 @@ function Signon() {
                         <FontAwesomeIcon icon={faXmark} />
                     </button>
                 </Link>
-                <form onSubmit={handleSignUp}>
+                <form className={cx('dangki')} onSubmit={handleSignUp}>
                     <h2>Đăng Kí</h2>
 
                     <input

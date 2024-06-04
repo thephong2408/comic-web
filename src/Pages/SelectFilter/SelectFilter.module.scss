@@ -72,7 +72,7 @@
                 padding-left: 10px;
                 padding-right: 10px;
                 font-size: 1rem;
-                background-color: var(--background-color-card);
+                // background-color: var(--background-color-card);
                 color: var(--text-color-white);
                 display: flex;
                 justify-content: space-between;
@@ -116,4 +116,80 @@
             }
         }
     }
+}
+
+@media (max-width: 575.98px) {
+    .title {
+        font-size: var(--m);
+    }
+    .grid {
+        grid-template-columns: auto auto;
+    }
+    .wrapper {
+        height: auto;
+        .card {
+            min-width: 10rem;
+            max-width: 20rem;
+            height: auto;
+            .img {
+                position: relative;
+                max-height: 100%;
+                .img1 {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+    .wrapper {
+        & .menu {
+            font-size: var(--m);
+            display: flex;
+            justify-content: center;
+            & .menu-nav {
+                display: flex;
+                justify-content: flex-start;
+                width: 100%;
+                flex-wrap: wrap;
+                background-color: white;
+                padding: 2rem;
+
+                & .menu-ul {
+                    width: 15rem;
+                    display: flex;
+                    align-items: center;
+                    & .menu-item {
+                        margin-right: 0.4rem;
+                    }
+                    & .menu-theloai {
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Screen width >= 576px and < 768px: Hide timtruyen */
+@media (max-width: 576px) {
+    .container1 {
+        display: none;
+    }
+}
+@media (min-width: 576px) and (max-width: 767.98px) {
+}
+
+/* Screen width >= 768px and < 992px: Hide timtruyen */
+@media (min-width: 768px) and (max-width: 991.98px) {
+}
+
+/* Screen width >= 992px and < 1200px: You can define other styles here if needed */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+}
+
+/* Screen width >= 1200px and < 1400px: You can define other styles here if needed */
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+}
+
+/* Screen width >= 1400px: You can define other styles here if needed */
+@media (min-width: 1400px) {
 }

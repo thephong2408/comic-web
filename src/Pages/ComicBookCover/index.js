@@ -75,13 +75,6 @@ function ComicBookCover() {
                         <li className={cx('ul-first-part-li', 'ul-first-part-li-home')}>
                             <Link to={'/'}>Trang chủ</Link>
                         </li>
-                        <li className={cx('ul-first-part-li')}>
-                            <FontAwesomeIcon icon={faAnglesRight} />
-                        </li>
-                        <li className={cx('ul-first-part-li')}>{post.name}</li>
-                        <li className={cx('ul-first-part-li')}>
-                            <FontAwesomeIcon icon={faAnglesRight} />
-                        </li>
                     </ul>
                     <div className={cx('wrapper1')}>
                         <div className={cx('div-avt')}>

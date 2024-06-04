@@ -26,7 +26,7 @@ function SearchResult() {
     return (
         <div className={cx('wrapper')}>
             <ButtonTop />
-            <h3 className={cx('title')}>Kết quả tìm kiếm</h3>
+            <h3 className={cx('title')}>Kết quả tìm kiếm </h3>
             <div className={cx('grid')}>
                 {searchResults.map((item, index) => (
                     <div key={index} className={cx('wrapper1')}>

@@ -8,3 +8,10 @@
         padding-block: 2rem;
     }
 }
+@media (max-width: 576px) {
+    .wrapper {
+        h3 {
+            font-size: var(--m);
+        }
+    }
+}

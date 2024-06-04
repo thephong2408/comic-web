@@ -30,8 +30,8 @@ li {
 .ul-first-part {
     padding-top: 2rem;
     width: 100%;
-    font-size: var(--l);
     .ul-first-part-li {
+        font-size: var(--l);
         margin-right: 2rem;
         font-weight: 600;
     }
@@ -231,6 +231,16 @@ li {
 @media (max-width: 576px) {
     .ul-information-theloai {
         display: none;
+    }
+    .ul-first-part {
+        padding-top: 2rem;
+        width: 100%;
+        .ul-first-part-li {
+            min-width: 8rem;
+            font-size: var(--ms);
+            margin-right: 1rem;
+            font-weight: 600;
+        }
     }
 }
 @media (max-width: 767.98px) {

@@ -17,10 +17,10 @@
 
 //
 .wrapper1 {
-    padding-inline: 1rem;
+    padding-inline: 0.5rem;
     padding-block: 2rem;
     .card {
-        min-width: 20rem;
+        min-width: 18rem;
         max-width: 25rem;
         height: auto;
         .img {
@@ -115,22 +115,40 @@
     .container1 {
         display: none;
     }
+    .grid {
+        grid-template-columns: auto auto;
+    }
 }
 @media (min-width: 576px) and (max-width: 767.98px) {
+    .grid {
+        grid-template-columns: auto auto auto;
+    }
 }
 
-/* Screen width >= 768px and < 992px: Hide timtruyen */
+/* Screen width >= 768px and < 992px: 3 slides per view */
 @media (min-width: 768px) and (max-width: 991.98px) {
+    .grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 3fr));
+    }
 }
 
-/* Screen width >= 992px and < 1200px: You can define other styles here if needed */
+/* Screen width >= 992px and < 1200px: 4 slides per view */
 @media (min-width: 992px) and (max-width: 1199.98px) {
+    .grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 4fr));
+    }
 }
 
-/* Screen width >= 1200px and < 1400px: You can define other styles here if needed */
+/* Screen width >= 1200px and < 1400px: 5 slides per view */
 @media (min-width: 1200px) and (max-width: 1399.98px) {
+    .grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 4fr));
+    }
 }
 
-/* Screen width >= 1400px: You can define other styles here if needed */
+/* Screen width >= 1400px: 6 slides per view */
 @media (min-width: 1400px) {
+    .grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 5fr));
+    }
 }

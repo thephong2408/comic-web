@@ -66,7 +66,7 @@ function Header() {
         } else {
             setIsMenu(false);
         }
-    }, []);
+    }, [titlePart]);
 
     return (
         <div>

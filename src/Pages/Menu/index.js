@@ -16,7 +16,6 @@ function Upload() {
     }, []);
 
     const allGenres = Array.from(new Set(posts.flatMap((post) => post.theloai)));
-
     const [show, setShow] = useState(false);
     const [show1, setShow1] = useState(false);
     return (
@@ -70,9 +69,11 @@ function Upload() {
                                         <tbody>
                                             <tr>
                                                 {allGenres.map((genre, index) => (
-                                                    <Link to={`/${genre}`} key={index}>
-                                                        <td>{genre}</td>
-                                                    </Link>
+                                                    <td>
+                                                        <Link to={`/${genre}`} key={index}>
+                                                            {genre}
+                                                        </Link>
+                                                    </td>
                                                 ))}
                                             </tr>
                                         </tbody>

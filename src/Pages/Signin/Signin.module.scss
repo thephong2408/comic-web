@@ -61,6 +61,7 @@ h2 {
     color: red;
     padding-top: 2rem;
     border-bottom: 1px solid #ec3a3a;
+    background-color: aliceblue;
     margin-bottom: 3rem;
     border-top: none;
     border-left: none;
@@ -154,16 +155,33 @@ input {
         padding: 1rem;
     }
     h2 {
-        font-size: var(--m);
+        position: relative;
+        margin-bottom: 2rem;
+        font-size: var(--l);
     }
     .input {
-        padding: 0.6rem;
+        padding-inline: 0.6rem;
+        padding-block: 2rem;
         font-size: var(--ms);
     }
     .div-other-title {
         font-size: var(--n);
     }
     .dangnhap {
-        margin-top: 1rem;
+        margin-top: 2rem;
+    }
+    .sign-on {
+        z-index: 2;
+        height: auto;
+        // width: 60rem;
+        padding: 2rem;
+        background-color: transparent;
+        box-shadow: none;
+    }
+    .name {
+        height: 4rem;
+    }
+    .sai {
+        height: 4rem;
     }
 }

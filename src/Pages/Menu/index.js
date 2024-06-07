@@ -69,11 +69,9 @@ function Upload() {
                                         <tbody>
                                             <tr>
                                                 {allGenres.map((genre, index) => (
-                                                    <td>
-                                                        <Link to={`/${genre}`} key={index}>
-                                                            {genre}
-                                                        </Link>
-                                                    </td>
+                                                    <Link to={`/${genre}`} key={index}>
+                                                        <td>{genre}</td>
+                                                    </Link>
                                                 ))}
                                             </tr>
                                         </tbody>

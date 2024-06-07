@@ -14,9 +14,8 @@ function Sidebar() {
         setPosts(API);
     }, []);
 
+    const url = window.location.pathname; // Define url before using it
     useEffect(() => {
-        const url = window.location.pathname; // Define url before using it
-
         if (url.endsWith('/theodoi')) {
             setTitle('Truyện Đang Theo Dõi');
         } else if (url.endsWith('/hot')) {
@@ -26,7 +25,7 @@ function Sidebar() {
         } else {
             setTitle('Truyện Mới Cập Nhập');
         }
-    }, [posts]); // Cập nhật khi đường dẫn thay đổi
+    }, [url]); // Cập nhật khi đường dẫn thay đổi
 
     return (
         <div className={cx('wrapper')}>
